@@ -1,0 +1,75 @@
+:root {
+  --shadow-base: 4px 4px 16px 0px rgba(0,0,0,0.25);
+  --shadow-hover: 8px 8px 16px 0px rgba(0,0,0,0.25);
+  --shadow-active: 0px 0px 16px 0px rgba(0,0,0,0.25);
+
+  --variant-red: #fc7f7f;
+  --variant-blue: #8da5f3;
+  --variant-green: #8eef97;
+  --variant-yellow: #ffca5f;
+  --variant-gray: #e0e0e0;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  padding: 4px;
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.25);
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.25);
+}
+
+button:active {
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
+}
+
+.variant-circle {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+}
+
+.variant-color-red {
+  background-color: var(--variant-red);
+}
+
+.variant-color-blue {
+  background-color: var(--variant-blue);
+}
+
+.variant-color-green {
+  background-color: var(--variant-green);
+}
+
+.variant-color-yellow {
+  background-color: var(--variant-yellow);
+}
+
+.variant-color-gray {
+  background-color: var(--variant-gray);
+}
+
+.icon-card {
+  display: inline-block;
+  width: 128pt;
+  height: 128pt;
+  box-shadow: var(--shadow-base);
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.icon-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.icon-card:active {
+  box-shadow: var(--shadow-active);
+}
+
+.icon-card img {
+  width: 100%;
+  height: 100%;
+}
