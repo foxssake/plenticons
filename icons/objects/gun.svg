@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="16"
+   height="16"
+   version="1.1"
+   viewBox="0 0 16 16"
+   id="svg1"
+   sodipodi:docname="gun.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2"
+     inkscape:cx="-280"
+     inkscape:cy="-98.5"
+     inkscape:window-width="2560"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     id="rect6"
+     style="fill:#fc7f7f;fill-opacity:1;stroke:none;stroke-width:0.308993;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="M 7.1919378,7.1559422 C 7.339922,7.7277094 7.0121717,8.1912183 6.459887,8.1912183 6.3726671,8.1907621 6.2828293,8.1785265 6.1926544,8.1548219 l -8.143e-4,4.1775011 h 2 L 8.19268,9.2264945 h 7.195313 L 14.852094,7.1559422 H 8.1919378 Z"
+     transform="matrix(1,0,-0.25881905,0.96592583,0,0)"
+     sodipodi:nodetypes="cccccccccc" />
+  <rect
+     style="fill:#fc7f7f;fill-opacity:1;stroke:none;stroke-width:2.03497;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     id="rect7"
+     width="2"
+     height="2.0705523"
+     x="7.522758"
+     y="8.1912184"
+     transform="matrix(1,0,-0.25881905,0.96592583,0,0)"
+     rx="0.5"
+     ry="0.5" />
+</svg>

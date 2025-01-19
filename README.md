@@ -42,7 +42,7 @@ variations, ready to use!
     * Chain
     * World
     * Magnifying glass
-    * Trashcan?
+    * Trashcan
 * Creatures
     * Person
     * Monster
