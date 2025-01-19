@@ -1,173 +1,178 @@
-[gd_scene load_steps=36 format=3 uid="uid://clc4rkr7757sf"]
+[gd_scene load_steps=37 format=3 uid="uid://clc4rkr7757sf"]
 
 [ext_resource type="Script" path="res://scripts/previews.gd" id="1_uakks"]
 
-[sub_resource type="GDScript" id="GDScript_uuinj"]
+[sub_resource type="GDScript" id="GDScript_e4d8d"]
 script/source = "@icon(\"res://icons/2d/circle.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_80cg3"]
+[sub_resource type="GDScript" id="GDScript_m04g8"]
 script/source = "@icon(\"res://icons/2d/cross.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_t37ax"]
+[sub_resource type="GDScript" id="GDScript_uucc2"]
 script/source = "@icon(\"res://icons/2d/diamond.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_w11vo"]
+[sub_resource type="GDScript" id="GDScript_xnmxc"]
 script/source = "@icon(\"res://icons/2d/hexagon.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_o8tbx"]
+[sub_resource type="GDScript" id="GDScript_50viw"]
 script/source = "@icon(\"res://icons/2d/square.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_i24ll"]
+[sub_resource type="GDScript" id="GDScript_jcpoy"]
 script/source = "@icon(\"res://icons/2d/triangle-down.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_h3jg4"]
+[sub_resource type="GDScript" id="GDScript_4ibsl"]
 script/source = "@icon(\"res://icons/2d/triangle-up.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_nfiek"]
+[sub_resource type="GDScript" id="GDScript_ws4m3"]
 script/source = "@icon(\"res://icons/2d/tricross.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_otcae"]
+[sub_resource type="GDScript" id="GDScript_4lpy5"]
 script/source = "@icon(\"res://icons/3d/capsule.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_y83h6"]
+[sub_resource type="GDScript" id="GDScript_apahs"]
 script/source = "@icon(\"res://icons/3d/cone.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_44o30"]
+[sub_resource type="GDScript" id="GDScript_34km3"]
 script/source = "@icon(\"res://icons/3d/cube.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_ko3c8"]
+[sub_resource type="GDScript" id="GDScript_r2eev"]
 script/source = "@icon(\"res://icons/3d/cylinder.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_775bk"]
+[sub_resource type="GDScript" id="GDScript_0odt5"]
 script/source = "@icon(\"res://icons/3d/sphere.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_05ffl"]
+[sub_resource type="GDScript" id="GDScript_72f2d"]
 script/source = "@icon(\"res://icons/3d/torus.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_phpef"]
+[sub_resource type="GDScript" id="GDScript_ik5es"]
 script/source = "@icon(\"res://icons/creatures/demon.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_av0t7"]
+[sub_resource type="GDScript" id="GDScript_8i6i2"]
+script/source = "@icon(\"res://icons/creatures/eye-hollow.svg\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_7xtwk"]
 script/source = "@icon(\"res://icons/creatures/eye.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_cke46"]
+[sub_resource type="GDScript" id="GDScript_rt0xj"]
 script/source = "@icon(\"res://icons/creatures/heart-full.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_kv440"]
+[sub_resource type="GDScript" id="GDScript_ykw43"]
 script/source = "@icon(\"res://icons/creatures/heart-half.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_bhsw7"]
+[sub_resource type="GDScript" id="GDScript_yuv4d"]
 script/source = "@icon(\"res://icons/creatures/heart.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_ue85q"]
+[sub_resource type="GDScript" id="GDScript_1dpqr"]
 script/source = "@icon(\"res://icons/creatures/person.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_fybxm"]
+[sub_resource type="GDScript" id="GDScript_2gyj4"]
 script/source = "@icon(\"res://icons/objects/ammo.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_78u62"]
+[sub_resource type="GDScript" id="GDScript_qmern"]
 script/source = "@icon(\"res://icons/objects/axe.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_qrgtn"]
+[sub_resource type="GDScript" id="GDScript_gv80q"]
 script/source = "@icon(\"res://icons/objects/bell.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_in1ke"]
+[sub_resource type="GDScript" id="GDScript_v527w"]
 script/source = "@icon(\"res://icons/objects/chain.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_fay6t"]
+[sub_resource type="GDScript" id="GDScript_6vr77"]
 script/source = "@icon(\"res://icons/objects/chest.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_cgbmo"]
+[sub_resource type="GDScript" id="GDScript_s2luh"]
 script/source = "@icon(\"res://icons/objects/globe.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_qwwos"]
+[sub_resource type="GDScript" id="GDScript_tp426"]
 script/source = "@icon(\"res://icons/objects/gun.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_gt3it"]
+[sub_resource type="GDScript" id="GDScript_hlnuq"]
 script/source = "@icon(\"res://icons/objects/hammer.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_p6onh"]
+[sub_resource type="GDScript" id="GDScript_feblk"]
 script/source = "@icon(\"res://icons/objects/magnifying-glass.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_lv5qf"]
+[sub_resource type="GDScript" id="GDScript_77jkh"]
 script/source = "@icon(\"res://icons/objects/pickaxe.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_uswq4"]
+[sub_resource type="GDScript" id="GDScript_2yybk"]
 script/source = "@icon(\"res://icons/objects/shield.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_fhirq"]
+[sub_resource type="GDScript" id="GDScript_jmqtw"]
 script/source = "@icon(\"res://icons/objects/sword.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_6s7qt"]
+[sub_resource type="GDScript" id="GDScript_wcnxt"]
 script/source = "@icon(\"res://icons/objects/swords-crossed.svg\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_qyjtu"]
+[sub_resource type="GDScript" id="GDScript_8pk44"]
 script/source = "@icon(\"res://icons/objects/trashcan.svg\")
 extends Node
 "
@@ -178,109 +183,112 @@ script = ExtResource("1_uakks")
 [node name="2d" type="Node" parent="."]
 
 [node name="circle" type="Node" parent="2d"]
-script = SubResource("GDScript_uuinj")
+script = SubResource("GDScript_e4d8d")
 
 [node name="cross" type="Node" parent="2d"]
-script = SubResource("GDScript_80cg3")
+script = SubResource("GDScript_m04g8")
 
 [node name="diamond" type="Node" parent="2d"]
-script = SubResource("GDScript_t37ax")
+script = SubResource("GDScript_uucc2")
 
 [node name="hexagon" type="Node" parent="2d"]
-script = SubResource("GDScript_w11vo")
+script = SubResource("GDScript_xnmxc")
 
 [node name="square" type="Node" parent="2d"]
-script = SubResource("GDScript_o8tbx")
+script = SubResource("GDScript_50viw")
 
 [node name="triangle-down" type="Node" parent="2d"]
-script = SubResource("GDScript_i24ll")
+script = SubResource("GDScript_jcpoy")
 
 [node name="triangle-up" type="Node" parent="2d"]
-script = SubResource("GDScript_h3jg4")
+script = SubResource("GDScript_4ibsl")
 
 [node name="tricross" type="Node" parent="2d"]
-script = SubResource("GDScript_nfiek")
+script = SubResource("GDScript_ws4m3")
 
 [node name="3d" type="Node" parent="."]
 
 [node name="capsule" type="Node" parent="3d"]
-script = SubResource("GDScript_otcae")
+script = SubResource("GDScript_4lpy5")
 
 [node name="cone" type="Node" parent="3d"]
-script = SubResource("GDScript_y83h6")
+script = SubResource("GDScript_apahs")
 
 [node name="cube" type="Node" parent="3d"]
-script = SubResource("GDScript_44o30")
+script = SubResource("GDScript_34km3")
 
 [node name="cylinder" type="Node" parent="3d"]
-script = SubResource("GDScript_ko3c8")
+script = SubResource("GDScript_r2eev")
 
 [node name="sphere" type="Node" parent="3d"]
-script = SubResource("GDScript_775bk")
+script = SubResource("GDScript_0odt5")
 
 [node name="torus" type="Node" parent="3d"]
-script = SubResource("GDScript_05ffl")
+script = SubResource("GDScript_72f2d")
 
 [node name="creatures" type="Node" parent="."]
 
 [node name="demon" type="Node" parent="creatures"]
-script = SubResource("GDScript_phpef")
+script = SubResource("GDScript_ik5es")
+
+[node name="eye-hollow" type="Node" parent="creatures"]
+script = SubResource("GDScript_8i6i2")
 
 [node name="eye" type="Node" parent="creatures"]
-script = SubResource("GDScript_av0t7")
+script = SubResource("GDScript_7xtwk")
 
 [node name="heart-full" type="Node" parent="creatures"]
-script = SubResource("GDScript_cke46")
+script = SubResource("GDScript_rt0xj")
 
 [node name="heart-half" type="Node" parent="creatures"]
-script = SubResource("GDScript_kv440")
+script = SubResource("GDScript_ykw43")
 
 [node name="heart" type="Node" parent="creatures"]
-script = SubResource("GDScript_bhsw7")
+script = SubResource("GDScript_yuv4d")
 
 [node name="person" type="Node" parent="creatures"]
-script = SubResource("GDScript_ue85q")
+script = SubResource("GDScript_1dpqr")
 
 [node name="objects" type="Node" parent="."]
 
 [node name="ammo" type="Node" parent="objects"]
-script = SubResource("GDScript_fybxm")
+script = SubResource("GDScript_2gyj4")
 
 [node name="axe" type="Node" parent="objects"]
-script = SubResource("GDScript_78u62")
+script = SubResource("GDScript_qmern")
 
 [node name="bell" type="Node" parent="objects"]
-script = SubResource("GDScript_qrgtn")
+script = SubResource("GDScript_gv80q")
 
 [node name="chain" type="Node" parent="objects"]
-script = SubResource("GDScript_in1ke")
+script = SubResource("GDScript_v527w")
 
 [node name="chest" type="Node" parent="objects"]
-script = SubResource("GDScript_fay6t")
+script = SubResource("GDScript_6vr77")
 
 [node name="globe" type="Node" parent="objects"]
-script = SubResource("GDScript_cgbmo")
+script = SubResource("GDScript_s2luh")
 
 [node name="gun" type="Node" parent="objects"]
-script = SubResource("GDScript_qwwos")
+script = SubResource("GDScript_tp426")
 
 [node name="hammer" type="Node" parent="objects"]
-script = SubResource("GDScript_gt3it")
+script = SubResource("GDScript_hlnuq")
 
 [node name="magnifying-glass" type="Node" parent="objects"]
-script = SubResource("GDScript_p6onh")
+script = SubResource("GDScript_feblk")
 
 [node name="pickaxe" type="Node" parent="objects"]
-script = SubResource("GDScript_lv5qf")
+script = SubResource("GDScript_77jkh")
 
 [node name="shield" type="Node" parent="objects"]
-script = SubResource("GDScript_uswq4")
+script = SubResource("GDScript_2yybk")
 
 [node name="sword" type="Node" parent="objects"]
-script = SubResource("GDScript_fhirq")
+script = SubResource("GDScript_jmqtw")
 
 [node name="swords-crossed" type="Node" parent="objects"]
-script = SubResource("GDScript_6s7qt")
+script = SubResource("GDScript_wcnxt")
 
 [node name="trashcan" type="Node" parent="objects"]
-script = SubResource("GDScript_qyjtu")
+script = SubResource("GDScript_8pk44")

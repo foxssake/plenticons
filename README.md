@@ -1,59 +1,15 @@
-# Tiny Tags
+# ManyTags
 
-Tiny Tags is a pack of icons to use with custom nodes in the [Godot] editor.
+ManyTags is a pack of icons to use with custom nodes in the [Godot] editor.
 
 Often, when working on projects, it would be nice to have some custom icons for
 specific nodes, but finishing the project is a big enough task in itself.
 Making custom icons for different nodes is often overkill, as it adds effort,
 but doesn't effect the finished game at all.
 
-This is where Tiny Tags comes in. It contains many icons, in multiple
-variations, ready to use!
-
-## Scope
-
-* 2D shapes
-    * Circle
-    * Square
-    * Diamond
-    * Triangle up
-    * Triangle down
-    * Hexagon
-    * Cross
-    * Tri-cross
-* 3D shapes
-    * Sphere
-    * Cube
-    * Cylinder
-    * Cone
-    * Capsule
-    * Torus
-* Objects
-    * Gun
-    * Ammo
-    * Sword
-    * Swords crossed
-    * Shield
-    * Hammer
-    * Axe
-    * Pickaxe
-    * Chest
-    * Bell
-    * Chain
-    * World
-    * Magnifying glass
-    * Trashcan
-* Creatures
-    * Person
-    * Monster
-    * Heart
-    * Eye
-* Misc
-    * Dot-spark
-
 ## Variations
 
-Each icon should come in multiple color variations:
+Each icon comes in multiple color variations:
 
 * Gray ( `#e0e0e0` )
 * Red ( `#fc7f7f` )

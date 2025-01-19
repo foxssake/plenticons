@@ -10,6 +10,6 @@ config_version=5
 
 [application]
 
-config/name="tiny-tags"
+config/name="ManyTags"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.svg"
