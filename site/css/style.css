@@ -1,7 +1,12 @@
 :root {
-  --shadow-base: 4px 4px 16px 0px rgba(0,0,0,0.25);
-  --shadow-hover: 8px 8px 16px 0px rgba(0,0,0,0.25);
-  --shadow-active: 0px 0px 16px 0px rgba(0,0,0,0.25);
+  --shadow-color: rgba(0,0,0,1);
+  --shadow-base: 4px 4px 16px 0px var(--shadow-color);
+  --shadow-hover: 8px 8px 16px 0px var(--shadow-color);
+  --shadow-active: 0px 0px 16px 0px var(--shadow-color);
+
+  --godot-dark: #1d2229;
+  --godot-mid: #252b34;
+  --godot-raised: #363d4a;
 
   --variant-red: #fc7f7f;
   --variant-blue: #8da5f3;
@@ -10,28 +15,38 @@
   --variant-gray: #e0e0e0;
 }
 
+body {
+  background-color: var(--godot-dark);
+  color: white;
+  font-family: sans-serif;
+
+  max-width: 100vh;
+  margin: auto;
+}
+
 button {
-  background-color: inherit;
+  background-color: var(--godot-raised);
   font: inherit;
+  color: inherit;
   border: none;
   padding: 4px;
-  box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.25);
+  box-shadow: 2px 2px 8px 0px var(--shadow-color);
   transition: box-shadow 0.1s ease-in-out;
 }
 
 button:hover {
-  box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.25);
+  box-shadow: 4px 4px 8px 0px var(--shadow-color);
 }
 
 button:active {
-  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 8px 0px var(--shadow-color);
 }
 
 input {
   background-color: inherit;
   font: inherit;
   border: 0px;
-  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.25) inset;
+  box-shadow: 0px 0px 4px 0px var(--shadow-color);
   padding: 4pt;
 }
 
@@ -64,8 +79,10 @@ input {
 
 .icon-card {
   display: inline-block;
+  background-color: var(--godot-raised);
   width: 128pt;
-  height: 128pt;
+  max-width: 20vw;
+  aspect-ratio: 1/1;
   box-shadow: var(--shadow-base);
   transition: box-shadow 0.1s ease-in-out;
 }
@@ -85,11 +102,13 @@ input {
 
 .icon-modal {
   box-shadow: 0px 0px 32px 0px rgba(0,0,0,0.5);
+  background-color: var(--godot-raised);
   padding: 1rem;
 }
 
 .icon-preview {
   display: inline-block;
+  background-color: var(--godot-mid);
   width: 128pt;
   height: 128pt;
 }

@@ -79,8 +79,15 @@ async function main() {
       icons[category][name][variant] = path;
     })
 
-  console.log('Icons:', icons)
-  console.log('Categories:', Object.keys(icons))
+  // Preload all images
+  iconsFlat
+    .forEach(({ path }) => {
+      const link = document.createElement('link')
+      link.rel = 'preload'
+      link.as = 'image'
+      link.href = path
+      document.head.appendChild(link)
+    })
 
   // Render variant buttons
   document.querySelectorAll('.variant-container')
@@ -94,7 +101,7 @@ async function main() {
 
   const variant = VariantButton.variants[0]
   for (const [categoryName, categoryIcons] of Object.entries(icons)) {
-    const categoryHeader = document.createElement('h2')
+    const categoryHeader = document.createElement('h3')
     categoryHeader.innerText = capitalize(categoryName);
     iconCardContainer.appendChild(categoryHeader);
     
