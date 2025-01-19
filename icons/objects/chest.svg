@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="8"
-     inkscape:cx="2.625"
-     inkscape:cy="9"
+     inkscape:zoom="1"
+     inkscape:cx="-402"
+     inkscape:cy="-120"
      inkscape:window-width="2560"
      inkscape:window-height="1048"
      inkscape:window-x="0"
@@ -44,9 +44,9 @@
      width="2"
      height="2"
      x="7"
-     y="7" />
+     y="6" />
   <path
      style="fill:none;fill-opacity:1;stroke:#fc7f7f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 3,8 H 13"
+     d="M 3,7 H 13"
      id="path9" />
 </svg>
