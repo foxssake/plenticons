@@ -16,6 +16,35 @@ class IconCard extends HTMLElement {
 
   connectedCallback() {
     this.render();
+    document.addEventListener('variant', e => {
+      this.variant = e.detail
+      this.render()
+    })
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+}
+
+class VariantButton extends HTMLButtonElement {
+  static observedAttributes = ['variant']
+  static variants = ['gray', 'red', 'blue', 'green', 'yellow']
+
+  variant = 'gray'
+
+  render() {
+    this.innerHTML = `
+      <div class="variant-circle variant-color-${this.variant}"></div>
+      ${capitalize(this.variant)}
+    `
+  }
+
+  connectedCallback() {
+    this.render();
+    this.addEventListener('click', () =>
+      document.dispatchEvent(new CustomEvent('variant', { detail: this.variant }))
+    )
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
@@ -24,6 +53,7 @@ class IconCard extends HTMLElement {
 }
 
 customElements.define('icon-card', IconCard)
+customElements.define('variant-button', VariantButton, { extends: 'button' })
 
 function capitalize(text) {
   return text.split(' ')
@@ -52,10 +82,17 @@ async function main() {
   console.log('Icons:', icons)
   console.log('Categories:', Object.keys(icons))
 
+  // Render variant buttons
+  document.querySelectorAll('.variant-container')
+    .forEach(container => VariantButton.variants
+      .map(variant => Object.assign(new VariantButton(), { variant }))
+      .forEach(variantButton => container.appendChild(variantButton))
+    )
+
   // Render icon cards
   const iconCardContainer = document.querySelector('.icon-card-container')
 
-  const variant = 'red'
+  const variant = VariantButton.variants[0]
   for (const [categoryName, categoryIcons] of Object.entries(icons)) {
     const categoryHeader = document.createElement('h2')
     categoryHeader.innerText = capitalize(categoryName);
@@ -66,7 +103,7 @@ async function main() {
       const iconCard = new IconCard()
       iconCard.category = categoryName
       iconCard.name = iconName
-      iconCard.variant = 'red'
+      iconCard.variant = variant
 
       iconCardContainer.appendChild(iconCard)
     }
