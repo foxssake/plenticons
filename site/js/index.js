@@ -1,3 +1,30 @@
+class Icon extends HTMLElement {
+  static observedAttributes = ['root', 'category', 'name', 'variant'];
+
+  root = this.getAttribute('root') || 'icons/'
+  category = this.getAttribute('category')
+  name = this.getAttribute('name')
+  variant = this.getAttribute('variant') || 'gray'
+
+  render() {
+    this.innerHTML = `
+        <img src="${this.root}/${this.category}/${this.name}-${this.variant}.svg" />
+    `;
+  }
+
+  connectedCallback() {
+    this.render();
+    document.addEventListener('variant', e => {
+      this.variant = e.detail
+      this.render()
+    })
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this.render();
+  }
+}
+
 class IconCard extends HTMLElement {
   static observedAttributes = ['root', 'category', 'name', 'variant'];
 
@@ -47,13 +74,29 @@ class VariantButton extends HTMLButtonElement {
     )
   }
 
-  attributeChangedCallback(name, oldValue, newValue) {
+  attributeChangedCallback() {
     this.render();
   }
 }
 
+class VariantPicker extends HTMLElement {
+  render() {
+    for (const variant of VariantButton.variants) {
+      const variantButton = new VariantButton()
+      variantButton.variant = variant
+      this.appendChild(variantButton)
+    }
+  }
+
+  connectedCallback() {
+    this.render();
+  }
+}
+
+customElements.define('icon-inline', Icon)
 customElements.define('icon-card', IconCard)
 customElements.define('variant-button', VariantButton, { extends: 'button' })
+customElements.define('variant-picker', VariantPicker)
 
 function capitalize(text) {
   return text.split(' ')
@@ -88,13 +131,6 @@ async function main() {
       link.href = path
       document.head.appendChild(link)
     })
-
-  // Render variant buttons
-  document.querySelectorAll('.variant-container')
-    .forEach(container => VariantButton.variants
-      .map(variant => Object.assign(new VariantButton(), { variant }))
-      .forEach(variantButton => container.appendChild(variantButton))
-    )
 
   // Render icon cards
   const iconCardContainer = document.querySelector('.icon-card-container')
