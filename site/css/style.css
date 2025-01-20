@@ -7,6 +7,7 @@
   --godot-dark: #1d2229;
   --godot-mid: #252b34;
   --godot-raised: #363d4a;
+  --godot-link: #9cc1e2;
 
   --variant-red: #fc7f7f;
   --variant-blue: #8da5f3;
@@ -22,6 +23,15 @@ body {
 
   max-width: 100vh;
   margin: auto;
+}
+
+a {
+  color: var(--godot-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 button {
