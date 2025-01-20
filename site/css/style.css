@@ -141,7 +141,8 @@ input {
 }
 
 .icon-snippet {
-  min-width: 64ch;
+  width: 64ch;
+  max-width: 80vw;
 }
 
 .modal {
