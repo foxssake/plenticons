@@ -34,11 +34,15 @@ class IconCard extends HTMLElement {
   variant = ''
 
   render() {
-    this.innerHTML = `
-      <div class="icon-card">
-        <img src="${this.root}/${this.category}/${this.name}-${this.variant}.svg" />
-      </div>
-    `;
+    if (this.childElementCount == 0) {
+      this.innerHTML = `
+        <div class="icon-card">
+          <img src="" />
+        </div>
+      `;
+    }
+
+    this.querySelector('img').src = `${this.root}/${this.category}/${this.name}-${this.variant}.svg`
   }
 
   connectedCallback() {

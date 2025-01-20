@@ -8,6 +8,8 @@
   --godot-mid: #252b34;
   --godot-raised: #363d4a;
   --godot-link: #9cc1e2;
+  --godot-text: #bdbec0;
+  --godot-title: #70bafa;
 
   --variant-red: #fc7f7f;
   --variant-blue: #8da5f3;
@@ -18,11 +20,15 @@
 
 body {
   background-color: var(--godot-dark);
-  color: white;
+  color: var(--godot-text);
   font-family: sans-serif;
 
   max-width: 100vh;
   margin: auto;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: var(--godot-title);
 }
 
 a {
