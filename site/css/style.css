@@ -157,3 +157,8 @@ input {
   justify-content: center;
   align-items: center;
 }
+
+.modal-close {
+  text-align: right;
+  position: relative;
+}

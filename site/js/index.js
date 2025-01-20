@@ -21,6 +21,7 @@ class Icon extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
+    this[name] = newValue
     this.render();
   }
 }
@@ -37,23 +38,37 @@ class IconCard extends HTMLElement {
     if (this.childElementCount == 0) {
       this.innerHTML = `
         <div class="icon-card">
-          <img src="" />
+          <img/>
         </div>
       `;
     }
 
-    this.querySelector('img').src = `${this.root}/${this.category}/${this.name}-${this.variant}.svg`
+    const img = this.querySelector('img')
+    img.src = `${this.root}${this.category}/${this.name}-${this.variant}.svg`
+    img.alt = `${this.name} ${this.variant}`
+    img.title = `${this.name} ${this.variant}`
   }
 
   connectedCallback() {
     this.render();
+
     document.addEventListener('variant', e => {
       this.variant = e.detail
       this.render()
     })
+
+    this.addEventListener('click', () => {
+      const iconModal = document.querySelector('icon-modal')
+      iconModal.setAttribute('category', this.category)
+      iconModal.setAttribute('name', this.name)
+      iconModal.setAttribute('variant', this.variant)
+
+      iconModal.parentElement.style.visibility = 'visible'
+    })
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
+    this[name] = newValue
     this.render();
   }
 }
@@ -78,7 +93,8 @@ class VariantButton extends HTMLButtonElement {
     )
   }
 
-  attributeChangedCallback() {
+  attributeChangedCallback(name, oldValue, newValue) {
+    this[name] = newValue
     this.render();
   }
 }
@@ -97,15 +113,98 @@ class VariantPicker extends HTMLElement {
   }
 }
 
+class IconModal extends HTMLDivElement {
+  static observedAttributes = ['root', 'category', 'name', 'variant'];
+
+  root = 'icons/'
+  category = ''
+  name = ''
+  variant = 'gray'
+
+  render() {
+    if (!this.childElementCount) {
+      this.innerHTML = `
+        <div class="icon-modal">
+          <div class="modal-close">✕</div>
+
+          <div class="icon-preview">
+            <img src="icons/objects/bell-blue.svg" />
+          </div>
+
+          <div class="icon-form">
+            <h3><icon-inline category="objects" name="bell"></icon-inline><span>Bell</span></h3>
+
+            <variant-picker></variant-picker>
+
+            <div>
+              <input class="icon-snippet" type="text" disabled value="@icon('res://addons/many-tags/icons/objects/bell-blue.svg')"></input>
+            </div>
+
+            <div>
+              Download: 
+              <button>svg</button>
+              <button>import</button>
+              <button>all icons</button>
+            </div>
+
+            <div>
+              Engage:
+              <a href="https://ko-fi.com/foxssake">ko-fi</a>
+              <a href="https://discord.gg/xWGh4GskG5">Discord</a>
+            </div>
+          </div>
+        </div>
+      `
+
+      this.querySelector('.modal-close').addEventListener('click', () => 
+        document.querySelectorAll('.modal').forEach(e => e.style.visibility = 'hidden')
+      )
+    }
+
+    const img = this.querySelector('.icon-preview > img')
+    img.src = `${this.root}${this.category}/${this.name}-${this.variant}.svg`
+    img.alt = `${this.name} ${this.variant}`
+    img.title = `${this.name} ${this.variant}`
+
+    const title = this.querySelector('h3>span')
+    title.textContent = unslug(this.name ?? '')
+
+    const inlineIcon = this.querySelector('icon-inline')
+    inlineIcon.setAttribute('category', this.category)
+    inlineIcon.setAttribute('name', this.name)
+
+    const snippet = this.querySelector('.icon-snippet')
+    snippet.value = `@icon("res://addons/many-tags/icons/${this.category}/${this.name}-${this.variant}.svg")`
+  }
+
+  connectedCallback() {
+    this.render()
+    document.addEventListener('variant', e => {
+      this.variant = e.detail
+      this.render()
+    })
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    this[name] = newValue
+    this.render();
+  }
+}
+
 customElements.define('icon-inline', Icon)
 customElements.define('icon-card', IconCard)
 customElements.define('variant-button', VariantButton, { extends: 'button' })
 customElements.define('variant-picker', VariantPicker)
+customElements.define('icon-modal', IconModal, { extends: 'div' })
 
 function capitalize(text) {
   return text.split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ')
+}
+
+function unslug(text) {
+  return capitalize(text.replace(/\-/, ' '))
 }
 
 async function main() {
