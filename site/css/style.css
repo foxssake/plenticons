@@ -62,6 +62,7 @@ button:active {
 input {
   background-color: inherit;
   font: inherit;
+  color: inherit;
   border: 0px;
   box-shadow: 0px 0px 4px 0px var(--shadow-color);
   padding: 4pt;
@@ -141,8 +142,27 @@ input {
 }
 
 .icon-snippet {
+  display: flex;
+  align-items: center;
+  padding: 2pt;
   width: 64ch;
   max-width: 80vw;
+  background-color: var(--godot-mid);
+}
+
+.icon-snippet > input {
+  flex-grow: 1;
+  background: none;
+  box-shadow: none;
+}
+
+.icon-snippet::after {
+  content: '📋';
+  text-align: right;
+}
+
+.copied::after {
+  content: '✅';
 }
 
 .modal {

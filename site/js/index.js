@@ -125,7 +125,7 @@ class IconModal extends HTMLDivElement {
     if (!this.childElementCount) {
       this.innerHTML = `
         <div class="icon-modal">
-          <div class="modal-close">✕</div>
+          <!-- <div class="modal-close">✕</div> -->
 
           <div class="icon-preview">
             <img src="icons/objects/bell-blue.svg" />
@@ -136,14 +136,13 @@ class IconModal extends HTMLDivElement {
 
             <variant-picker></variant-picker>
 
-            <div>
-              <input class="icon-snippet" type="text" disabled value="@icon('res://addons/many-tags/icons/objects/bell-blue.svg')"></input>
+            <div class="icon-snippet">
+              <input type="text" value="@icon()" readonly />
             </div>
 
             <div>
               Download: 
               <button>svg</button>
-              <button>import</button>
               <button>all icons</button>
             </div>
 
@@ -156,8 +155,19 @@ class IconModal extends HTMLDivElement {
         </div>
       `
 
-      this.querySelector('.modal-close').addEventListener('click', () => 
-        document.querySelectorAll('.modal').forEach(e => e.style.visibility = 'hidden')
+      // this.querySelector('.modal-close').addEventListener('click', () => 
+      //   document.querySelectorAll('.modal').forEach(e => e.style.visibility = 'hidden')
+      // )
+
+      this.querySelectorAll('.icon-snippet>input').forEach(input =>
+        input.addEventListener('click', () => {
+          // Copy to clipboard
+          navigator.clipboard.writeText(input.value)
+
+          // Display icon notif
+          input.parentElement.classList.add('copied')
+          setTimeout(() => input.parentElement.classList.remove('copied'), 500)
+        })
       )
     }
 
@@ -173,7 +183,7 @@ class IconModal extends HTMLDivElement {
     inlineIcon.setAttribute('category', this.category)
     inlineIcon.setAttribute('name', this.name)
 
-    const snippet = this.querySelector('.icon-snippet')
+    const snippet = this.querySelector('.icon-snippet>input')
     snippet.value = `@icon("res://addons/many-tags/icons/${this.category}/${this.name}-${this.variant}.svg")`
   }
 
@@ -254,6 +264,12 @@ async function main() {
       iconCardContainer.appendChild(iconCard)
     }
   }
+
+  // Exit modal on click
+  document.querySelector('.modal').addEventListener('click', e => {
+    if(e.currentTarget == e.target)
+      e.currentTarget.style.visibility = 'hidden'
+  })
 }
 
 main();
