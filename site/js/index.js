@@ -142,7 +142,7 @@ class IconModal extends HTMLDivElement {
 
             <div>
               Download: 
-              <button>svg</button>
+              <a class="svg-download"><button>svg</button></a>
               <button>all icons</button>
             </div>
 
@@ -182,6 +182,10 @@ class IconModal extends HTMLDivElement {
     const inlineIcon = this.querySelector('icon-inline')
     inlineIcon.setAttribute('category', this.category)
     inlineIcon.setAttribute('name', this.name)
+
+    const svgDownload = this.querySelector('.svg-download')
+    svgDownload.href = img.src
+    svgDownload.download = `${this.name}-${this.variant}.svg`
 
     const snippet = this.querySelector('.icon-snippet>input')
     snippet.value = `@icon("res://addons/many-tags/icons/${this.category}/${this.name}-${this.variant}.svg")`

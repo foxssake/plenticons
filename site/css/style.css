@@ -44,11 +44,17 @@ button {
   background-color: var(--godot-raised);
   font: inherit;
   color: inherit;
+
   border: none;
   padding: 4px;
+  margin: 4px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+
   box-shadow: 2px 2px 8px 0px var(--shadow-color);
   transition: box-shadow 0.1s ease-in-out;
-  margin: 4px;
 }
 
 button:hover {
@@ -72,6 +78,7 @@ input {
   display: inline-block;
   width: 1em;
   height: 1em;
+  margin-right: 4pt;
   border-radius: 1em;
 }
 
