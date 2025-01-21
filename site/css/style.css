@@ -113,6 +113,10 @@ input {
   background-color: var(--variant-gray);
 }
 
+img.icon-inline {
+  height: 16px;
+}
+
 .icon-card {
   display: inline-block;
   background-color: var(--godot-raised);

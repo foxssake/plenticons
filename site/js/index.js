@@ -11,7 +11,7 @@ class Icon extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        <img src="${this.root}/${this.category}/${this.name}-${this.variant}.svg" />
+        <img src="${this.root}/${this.category}/${this.name}-${this.variant}.svg" class="icon-inline" />
     `;
   }
 

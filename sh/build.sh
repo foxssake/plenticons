@@ -27,6 +27,7 @@ for ICON in $ICONS; do
 
         cat "$ICON" |\
             sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
+            # rsvg-convert --zoom 4 --format svg |\
             svgo --multipass - >\
             "$OUTPUT"
     done;
