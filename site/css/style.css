@@ -65,6 +65,11 @@ button:active {
   box-shadow: 0px 0px 8px 0px var(--shadow-color);
 }
 
+button>img {
+  height: 1em;
+  margin-right: 4pt;
+}
+
 input {
   background-color: inherit;
   font: inherit;
@@ -72,6 +77,12 @@ input {
   border: 0px;
   box-shadow: 0px 0px 4px 0px var(--shadow-color);
   padding: 4pt;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  background-color: inherit;
 }
 
 .variant-circle {

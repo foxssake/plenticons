@@ -33,3 +33,6 @@ for ICON in $ICONS; do
 
     rm "$ICON"
 done;
+
+# Clean any .import or other files
+find build/icons -type f -not -name "*.svg" -exec rm {} \;

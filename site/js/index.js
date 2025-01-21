@@ -1,3 +1,6 @@
+const VARIANTS = ['gray', 'red', 'blue', 'green', 'yellow']
+const MANIFEST = {}
+
 class Icon extends HTMLElement {
   static observedAttributes = ['root', 'category', 'name', 'variant'];
 
@@ -75,9 +78,8 @@ class IconCard extends HTMLElement {
 
 class VariantButton extends HTMLButtonElement {
   static observedAttributes = ['variant']
-  static variants = ['gray', 'red', 'blue', 'green', 'yellow']
 
-  variant = 'gray'
+  variant = VARIANTS[0]
 
   render() {
     this.innerHTML = `
@@ -101,7 +103,7 @@ class VariantButton extends HTMLButtonElement {
 
 class VariantPicker extends HTMLElement {
   render() {
-    for (const variant of VariantButton.variants) {
+    for (const variant of VARIANTS) {
       const variantButton = new VariantButton()
       variantButton.variant = variant
       this.appendChild(variantButton)
@@ -117,9 +119,9 @@ class IconModal extends HTMLDivElement {
   static observedAttributes = ['root', 'category', 'name', 'variant'];
 
   root = 'icons/'
-  category = ''
-  name = ''
-  variant = 'gray'
+  category = '2d'
+  name = 'circle'
+  variant = VARIANTS[0]
 
   render() {
     if (!this.childElementCount) {
@@ -128,11 +130,11 @@ class IconModal extends HTMLDivElement {
           <!-- <div class="modal-close">✕</div> -->
 
           <div class="icon-preview">
-            <img src="icons/objects/bell-blue.svg" />
+            <img/>
           </div>
 
           <div class="icon-form">
-            <h3><icon-inline category="objects" name="bell"></icon-inline><span>Bell</span></h3>
+            <h3><icon-inline category="2d" name="circle"></icon-inline><span></span></h3>
 
             <variant-picker></variant-picker>
 
@@ -143,13 +145,17 @@ class IconModal extends HTMLDivElement {
             <div>
               Download: 
               <a class="svg-download"><button>svg</button></a>
-              <button>all icons</button>
+              <a class="bundle-download"><button>bundle</button></a>
             </div>
 
             <div>
               Engage:
-              <a href="https://ko-fi.com/foxssake">ko-fi</a>
-              <a href="https://discord.gg/xWGh4GskG5">Discord</a>
+              <a href="https://discord.gg/xWGh4GskG5" target="_blank">
+                <button><img src="assets/discord-mark-white.svg" />Discord</button>
+              </a>
+              <a href="https://ko-fi.com/foxssake" target="_blank">
+                <button><img src="assets/kofi_symbol.svg" />Ko-Fi</button>
+              </a>
             </div>
           </div>
         </div>
@@ -166,7 +172,12 @@ class IconModal extends HTMLDivElement {
 
           // Display icon notif
           input.parentElement.classList.add('copied')
-          setTimeout(() => input.parentElement.classList.remove('copied'), 500)
+          input.value = 'Copied!'
+
+          setTimeout(() => {
+            input.parentElement.classList.remove('copied')
+            input.value = `@icon("res://addons/many-tags/icons/${this.category}/${this.name}-${this.variant}.svg")`
+          }, 750)
         })
       )
     }
@@ -186,6 +197,12 @@ class IconModal extends HTMLDivElement {
     const svgDownload = this.querySelector('.svg-download')
     svgDownload.href = img.src
     svgDownload.download = `${this.name}-${this.variant}.svg`
+
+    if (MANIFEST.bundle) {
+      const bundleDownload = this.querySelector('.bundle-download')
+      bundleDownload.href = MANIFEST.bundle
+      bundleDownload.download = MANIFEST.bundle.split('/').pop()
+    }
 
     const snippet = this.querySelector('.icon-snippet>input')
     snippet.value = `@icon("res://addons/many-tags/icons/${this.category}/${this.name}-${this.variant}.svg")`
@@ -222,48 +239,24 @@ function unslug(text) {
 }
 
 async function main() {
-  // Get icon list
-  const iconListResponse = await fetch('icons.list')
-  const iconList = (await iconListResponse.text()).split('\n')
-
-  const pathPattern = /icons\/([^/]+)\/(.+)\-(.+)\.svg/
-  const icons = {}
-  const iconsFlat = iconList
-    .map(path => pathPattern.exec(path))
-    .filter(match => !!match)
-    .map(match => ({ path: match[0], category: match[1], name: match[2], variant: match[3] }))
-
-  iconsFlat.forEach(({ path, category, name, variant }) => {
-      icons[category] = icons[category] ?? {}
-      icons[category][name] = icons[category][name] ?? {}
-      icons[category][name][variant] = path;
-    })
-
-  // Preload all images
-  iconsFlat
-    .forEach(({ path }) => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.as = 'image'
-      link.href = path
-      document.head.appendChild(link)
-    })
+  // Get manifest
+  const manifest = await fetch('manifest.json').then(r => r.json())
+  Object.assign(MANIFEST, manifest)
 
   // Render icon cards
   const iconCardContainer = document.querySelector('.icon-card-container')
 
-  const variant = VariantButton.variants[0]
-  for (const [categoryName, categoryIcons] of Object.entries(icons)) {
+  for (const [categoryName, categoryIcons] of Object.entries(manifest.icons)) {
     const categoryHeader = document.createElement('h3')
     categoryHeader.innerText = capitalize(categoryName);
     iconCardContainer.appendChild(categoryHeader);
-    
-    console.log(categoryName, Object.keys(categoryIcons))
-    for (const iconName of Object.keys(categoryIcons)) {
+
+    for (const iconName of categoryIcons) {
       const iconCard = new IconCard()
-      iconCard.category = categoryName
-      iconCard.name = iconName
-      iconCard.variant = variant
+
+      iconCard.setAttribute('category', categoryName)
+      iconCard.setAttribute('name', iconName)
+      iconCard.setAttribute('variant', VARIANTS[0])
 
       iconCardContainer.appendChild(iconCard)
     }
