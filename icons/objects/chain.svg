@@ -12,7 +12,67 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs1" />
+     id="defs1">
+    <inkscape:path-effect
+       effect="powermask"
+       id="path-effect6"
+       is_visible="true"
+       lpeversion="1"
+       uri="#mask-powermask-path-effect6"
+       invert="false"
+       hide_mask="false"
+       background="true"
+       background_color="#ffffffff" />
+    <filter
+       id="mask-powermask-path-effect5_inverse"
+       inkscape:label="filtermask-powermask-path-effect5"
+       style="color-interpolation-filters:sRGB"
+       height="100"
+       width="100"
+       x="-50"
+       y="-50">
+      <feColorMatrix
+         id="mask-powermask-path-effect5_primitive1"
+         values="1"
+         type="saturate"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="mask-powermask-path-effect5_primitive2"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         in="fbSourceGraphic" />
+    </filter>
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask-powermask-path-effect6">
+      <path
+         id="mask-powermask-path-effect6_box"
+         style="fill:#ffffff;fill-opacity:1"
+         d="M -1.9382551e-7,-1.9382551e-7 H 16 V 16 H -1.9382551e-7 Z" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:6;stroke-dasharray:none;stroke-opacity:1"
+         d="M 6.5857864,9.4142134 9.4142136,6.5857862"
+         id="path6"
+         sodipodi:nodetypes="cc" />
+    </mask>
+    <filter
+       id="mask-powermask-path-effect6_inverse"
+       inkscape:label="filtermask-powermask-path-effect6"
+       style="color-interpolation-filters:sRGB"
+       height="100"
+       width="100"
+       x="-50"
+       y="-50">
+      <feColorMatrix
+         id="mask-powermask-path-effect6_primitive1"
+         values="1"
+         type="saturate"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         id="mask-powermask-path-effect6_primitive2"
+         values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0 "
+         in="fbSourceGraphic" />
+    </filter>
+  </defs>
   <sodipodi:namedview
      id="namedview1"
      pagecolor="#ffffff"
@@ -22,26 +82,47 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2"
-     inkscape:cx="-152"
-     inkscape:cy="-8.5"
+     inkscape:zoom="4"
+     inkscape:cx="-34.75"
+     inkscape:cy="14.75"
      inkscape:window-width="2560"
      inkscape:window-height="1048"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1" />
+  <g
+     id="g5"
+     mask="url(#mask-powermask-path-effect6)"
+     inkscape:path-effect="#path-effect6">
+    <path
+       style="fill:none;stroke:#fc7f7f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:6;stroke-opacity:1"
+       id="rect2"
+       width="6"
+       height="4"
+       x="-7.6659679"
+       y="9.3137083"
+       rx="2"
+       ry="2"
+       transform="rotate(-45)"
+       sodipodi:type="rect"
+       d="m -5.6659679,9.3137083 h 2 c 1.108,0 2,0.8919997 2,1.9999997 0,1.108 -0.892,2 -2,2 l -2,0 c -1.108,0 -2,-0.892 -2,-2 0,-1.108 0.892,-1.9999997 2,-1.9999997 z" />
+    <path
+       style="fill:none;stroke:#fc7f7f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:6;stroke-opacity:1"
+       id="rect3"
+       width="6"
+       height="4"
+       x="-7.6659679"
+       y="-13.313708"
+       rx="2"
+       ry="2"
+       transform="rotate(135)"
+       sodipodi:type="rect"
+       d="m -5.6659679,-13.313708 2,0 c 1.108,0 2,0.892 2,2 0,1.108 -0.892,1.9999997 -2,1.9999997 h -2 c -1.108,0 -2,-0.8919997 -2,-1.9999997 0,-1.108 0.892,-2 2,-2 z" />
+  </g>
   <path
-     id="path15"
-     style="fill:#fc7f7f;stroke-width:1.23841;stroke-linecap:round;stroke-linejoin:round"
-     d="M 6.8865753,7.362047 C 6.0601013,7.1442036 5.141049,7.356196 4.4972445,8 L 3.6215556,8.8756889 c -0.9620746,0.9620732 -0.9620736,2.5406821 0,3.5027561 0.9620735,0.962073 2.5406826,0.962074 3.5027555,0 L 8,11.502755 C 8.643804,10.858951 8.8557964,9.9398987 8.637953,9.1134247 L 7.1260215,10.625356 c -5.733e-4,5.76e-4 -0.00114,0.0011 -0.00171,0.0017 l -0.8756889,0.875689 c -0.4888152,0.488816 -1.2625618,0.488816 -1.7513777,0 -0.4888159,-0.488816 -0.4888161,-1.262562 0,-1.7513776 L 5.3729334,8.8756889 a 1.2384111,1.2384111 0 0 1 0.00171,-0.00171 z" />
-  <path
-     style="fill:none;fill-opacity:1;stroke:#fc7f7f;stroke-width:1.23841;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="M 9.7496671,6.2503329 6.2503329,9.7496671"
-     id="path18"
+     style="fill:none;stroke:#fc7f7f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:6;stroke-opacity:1"
+     d="M 6.5857864,9.4142134 9.4142136,6.5857862"
+     id="path3"
      sodipodi:nodetypes="cc" />
-  <path
-     id="path20"
-     style="fill:#fc7f7f;stroke-width:1.23841;stroke-linecap:round;stroke-linejoin:round"
-     d="M 7.362047,6.8865753 C 7.1442033,6.0601016 7.3561959,5.1410491 8.0000004,4.4972441 L 8.8756893,3.6215552 c 0.9620728,-0.9620742 2.5406817,-0.9620732 3.5027557,4e-7 0.962073,0.9620735 0.962074,2.5406826 0,3.5027551 l -0.87569,0.8756889 C 10.858951,8.6438041 9.9398984,8.8557967 9.1134247,8.637953 L 10.625357,7.126021 c 5.75e-4,-5.726e-4 0.0011,-0.00114 0.0017,-0.00175 L 11.50278,6.2485859 c 0.488816,-0.488815 0.488816,-1.2625615 -10e-7,-1.7513775 -0.488816,-0.4888158 -1.262562,-0.4888159 -1.751377,-2e-7 L 8.8757304,5.3728918 a 1.2384111,1.2384111 0 0 0 -0.00175,0.00175 z" />
 </svg>
