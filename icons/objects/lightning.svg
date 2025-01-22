@@ -5,7 +5,7 @@
    version="1.1"
    viewBox="0 0 16 16"
    id="svg2"
-   sodipodi:docname="cross.svg"
+   sodipodi:docname="lightning.svg"
    inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="37.388271"
-     inkscape:cx="5.5899884"
-     inkscape:cy="7.3552478"
+     inkscape:zoom="11.313708"
+     inkscape:cx="6.6291261"
+     inkscape:cy="9.0156115"
      inkscape:window-width="2560"
      inkscape:window-height="1048"
      inkscape:window-x="0"
@@ -32,19 +32,9 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <path
-     d="M 4.4644661,4.4644661 11.535534,11.535534"
-     fill="none"
-     stroke="#fc7f7f"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     stroke-width="2"
-     id="path1" />
-  <path
-     d="M 11.535534,4.4644661 4.4644661,11.535534"
-     fill="none"
-     stroke="#fc7f7f"
-     stroke-linecap="round"
-     stroke-linejoin="round"
-     stroke-width="2"
-     id="path2" />
+     id="path1"
+     style="fill:#fc7f7f;fill-opacity:1;stroke:#fc7f7f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:6;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
+     inkscape:transform-center-y="-0.97809255"
+     d="M 8,2.0000001 5,9 h 3 v 5 L 11,7 H 8 Z"
+     sodipodi:nodetypes="ccccccc" />
 </svg>
