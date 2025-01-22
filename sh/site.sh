@@ -6,13 +6,11 @@
 # Copy icons to site
 cp -r build/icons site/
 
-# Create bundle
-ROOT="$(pwd)"
+# Copy bundle
+bundle="$(echo build/*.zip)"
+bundle="$(basename "$bundle")"
 
-(
-  cd build/icons;
-  zip -r "$ROOT/site/many-tags.zip" .
-);
+cp "build/$bundle" "site/$bundle"
 
 # Generate manifest
 MANIFEST="site/manifest.json"
@@ -57,6 +55,6 @@ for CATEGORY in $CATEGORIES; do
 done;
 
 out "  },"
-out "  \"bundle\": \"many-tags.zip\""
+out "  \"bundle\": \"$bundle\""
 
 out "}"
