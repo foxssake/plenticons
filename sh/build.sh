@@ -13,6 +13,7 @@ BASE_COLOR="${COLORS[red]}"
 # Clean build area
 rm -rf build
 mkdir -p build
+echo "" > build/.gdignore
 
 # Generate variants
 cp -r icons/ build/
@@ -37,3 +38,6 @@ done;
 
 # Clean any .import or other files
 find build/icons -type f -not -name "*.svg" -exec rm {} \;
+
+# Prepare addon
+version="$(sh/version.sh)"

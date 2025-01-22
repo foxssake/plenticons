@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="$(cat project.godot | grep -Eo "[0-9]+.[0-9]+.[0-9]+")"
+version="$(sed -n "s/version=\"\([^\"]*\)\"/\1/p" addons/many-tags/plugin.cfg)"
 
 version_major="$(echo ${version} | cut -f1 -d.)"
 version_minor="$(echo ${version} | cut -f2 -d.)"
@@ -37,9 +37,7 @@ elif [ $1 == "envvar" ]; then
 fi
 
 if [ "$persist" = "true" ]; then
-    for addon in "${addons[@]}"; do
-        sed -i "s/version=.*/version=\"$version\"/g" "addons/$addon/plugin.cfg"
-    done
+    sed -i "s/version=.*/version=\"$version\"/g" "addons/many-tags/plugin.cfg"
 fi
 
 echo "$version"
