@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="-163.69522"
-     inkscape:cy="4.9497475"
+     inkscape:zoom="0.99999999"
+     inkscape:cx="-565"
+     inkscape:cy="-78.000001"
      inkscape:window-width="2560"
      inkscape:window-height="1048"
      inkscape:window-x="0"
@@ -32,20 +32,14 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg1" />
   <circle
-     style="fill:none;stroke:#fc7f7f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+     style="fill:none;stroke:#fc7f7f;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
      id="path1"
      cx="11.313708"
-     cy="-1.8700168"
-     r="3.2409348"
-     transform="rotate(45)" />
+     cy="-1.423097"
+     transform="rotate(45)"
+     r="5" />
   <path
-     style="fill:none;stroke:#fc7f7f;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none"
-     d="M 7.0306144,8.9693855 3.9803125,12.019688"
+     style="fill:none;stroke:#fc7f7f;stroke-width:3;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none"
+     d="M 5.4707475,10.529252 2.4204456,13.579554"
      id="path2" />
-  <circle
-     style="fill:#fc7f7f;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     id="path3"
-     cx="10.34375"
-     cy="5.59375"
-     r="1" />
 </svg>

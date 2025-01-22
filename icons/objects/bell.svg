@@ -22,9 +22,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="11.313708"
-     inkscape:cx="14.760854"
-     inkscape:cy="24.925514"
+     inkscape:zoom="5.656854"
+     inkscape:cx="-33.941127"
+     inkscape:cy="-7.9549516"
      inkscape:window-width="2560"
      inkscape:window-height="1048"
      inkscape:window-x="0"
@@ -33,19 +33,19 @@
      inkscape:current-layer="svg1" />
   <path
      id="circle14"
-     style="fill:none;fill-opacity:1;stroke:#fc7f7f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
-     d="m 8,3.5001503 c -1.6568542,0 -3,1.3431458 -3,3 v 2.5 l -1,2.4999997 8,0 -1,-2.4999997 v -2.5 c 0,-1.6568542 -1.3431458,-3 -3,-3 z"
+     style="fill:none;fill-opacity:1;stroke:#fc7f7f;stroke-width:2.06566;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     d="m 8.0000005,2.0328319 c -2.1509508,0 -3.8946411,1.7436902 -3.8946411,3.894641 V 9.1730072 L 2.8071457,12.41854 H 13.192854 L 11.894641,9.1730072 V 5.9274729 c 0,-2.1509508 -1.74369,-3.894641 -3.8946405,-3.894641 z"
      sodipodi:nodetypes="ssccccss" />
   <path
-     style="fill:none;fill-opacity:1;stroke:#fc7f7f;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+     style="fill:none;fill-opacity:1;stroke:#fc7f7f;stroke-width:2.06566;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
      id="path15"
      sodipodi:type="arc"
      sodipodi:cx="8"
-     sodipodi:cy="11.500151"
-     sodipodi:rx="1"
-     sodipodi:ry="1"
+     sodipodi:cy="12.418541"
+     sodipodi:rx="1.5492477"
+     sodipodi:ry="1.5492477"
      sodipodi:start="0"
      sodipodi:end="3.1415927"
      sodipodi:arc-type="slice"
-     d="m 9,11.500151 a 1,1 0 0 1 -0.5,0.866025 1,1 0 0 1 -1,0 A 1,1 0 0 1 7,11.500151 h 1 z" />
+     d="m 9.5492477,12.418541 a 1.5492477,1.5492477 0 0 1 -0.7746238,1.341688 1.5492477,1.5492477 0 0 1 -1.5492478,0 1.5492477,1.5492477 0 0 1 -0.7746238,-1.341688 H 8 Z" />
 </svg>
