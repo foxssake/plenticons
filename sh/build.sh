@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Declare variants
 declare -A COLORS=(\
     ["gray"]="#e0e0e0"
     ["red"]="#fc7f7f"
@@ -13,6 +14,7 @@ BASE_COLOR="${COLORS[red]}"
 # Clean build area
 rm -rf build
 mkdir -p build
+echo "" > build/.gdignore
 
 # Generate variants
 cp -r icons/ build/
@@ -28,8 +30,9 @@ for ICON in $ICONS; do
         cat "$ICON" |\
             sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
             # rsvg-convert --zoom 4 --format svg |\
-            svgo --multipass - >\
-            "$OUTPUT"
+            # svgo --multipass - \
+            cat \
+            > "$OUTPUT"
     done;
 
     rm "$ICON"
@@ -37,3 +40,18 @@ done;
 
 # Clean any .import or other files
 find build/icons -type f -not -name "*.svg" -exec rm {} \;
+
+# Prepare addon
+version="$(sh/version.sh)"
+root="$(pwd)"
+addon_root="$root/build/many-tags-v${version}/addons/many-tags/"
+
+mkdir -p "$addon_root"
+
+cp addons/many-tags/* "$addon_root"
+cp -r build/icons "$addon_root"
+
+(
+    cd build
+    zip -r "many-tags-v${version}.zip" "many-tags-v${version}"
+)
