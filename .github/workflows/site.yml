@@ -23,10 +23,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      - name: Setup rsvg
-        run: sudo apt install -y librsvg2-bin
-      - name: Setup svgo
-        run: npm i -g svgo
+      - name: Setup dependencies
+        run: sudo apt install -y librsvg2-bin pngquant && npm i -g svgo
       - name: Build
         run: sh/site.sh
       - name: Upload
