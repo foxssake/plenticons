@@ -59,14 +59,14 @@ done;
 # Prepare addon
 version="$(sh/version.sh)"
 root="$(pwd)"
-addon_root="$root/build/many-tags-v${version}/addons/many-tags/"
+addon_root="$root/build/plenticons-v${version}/addons/plenticons/"
 
 mkdir -p "$addon_root"
 
-cp addons/many-tags/* "$addon_root"
+cp addons/plenticons/* "$addon_root"
 cp -r build/bundle/icons "$addon_root"
 
 (
     cd build
-    zip -r "many-tags-v${version}.zip" "many-tags-v${version}"
+    zip -r "plenticons-v${version}.zip" "plenticons-v${version}"
 )
