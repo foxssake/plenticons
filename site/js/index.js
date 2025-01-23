@@ -176,7 +176,7 @@ class IconModal extends HTMLDivElement {
 
           setTimeout(() => {
             input.parentElement.classList.remove('copied')
-            input.value = `@icon("res://addons/many-tags/icons/${this.category}/${this.name}-${this.variant}.svg")`
+            input.value = `@icon("res://addons/many-tags/icons/16x/${this.category}/${this.name}-${this.variant}.png")`
           }, 750)
         })
       )
@@ -205,7 +205,7 @@ class IconModal extends HTMLDivElement {
     }
 
     const snippet = this.querySelector('.icon-snippet>input')
-    snippet.value = `@icon("res://addons/many-tags/icons/${this.category}/${this.name}-${this.variant}.svg")`
+    snippet.value = `@icon("res://addons/many-tags/icons/16x/${this.category}/${this.name}-${this.variant}.png")`
   }
 
   connectedCallback() {

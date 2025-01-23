@@ -8,7 +8,8 @@ func generate_previews():
 		child.queue_free()
 
 	# Generate previews
-	var da := DirAccess.open("res://icons/")
+	var directory = "res://icons"
+	var da := DirAccess.open(directory)
 	var dummy_script := load("res://scripts/dummy-script.gd") as Script
 
 	for category in da.get_directories():
@@ -18,12 +19,12 @@ func generate_previews():
 		category_node.owner = get_tree().edited_scene_root
 		print("Added category node %s with owner %s" % [category_node, owner])
 
-		for icon in da.get_files_at("res://icons/" + category):
-			if not icon.ends_with(".svg"):
+		for icon in da.get_files_at(directory + "/" + category):
+			if not icon.ends_with(".png") and not icon.ends_with(".svg"):
 				continue
 
 			var icon_script := dummy_script.duplicate() as Script
-			icon_script.source_code = "@icon(\"res://icons/%s/%s\")\nextends Node\n" % [category, icon]
+			icon_script.source_code = "@icon(\"%s/%s/%s\")\nextends Node\n" % [directory, category, icon]
 			icon_script.reload()
 
 			var icon_node := Node.new()

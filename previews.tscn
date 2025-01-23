@@ -1,249 +1,1229 @@
-[gd_scene load_steps=51 format=3 uid="uid://clc4rkr7757sf"]
+[gd_scene load_steps=247 format=3 uid="uid://clc4rkr7757sf"]
 
 [ext_resource type="Script" path="res://scripts/previews.gd" id="1_uakks"]
 
-[sub_resource type="GDScript" id="GDScript_6mlk5"]
-script/source = "@icon(\"res://icons/2d/checkmark.svg\")
+[sub_resource type="GDScript" id="GDScript_ohj40"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/checkmark-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_kkm6m"]
-script/source = "@icon(\"res://icons/2d/circle.svg\")
+[sub_resource type="GDScript" id="GDScript_v2d6i"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/checkmark-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_h4op7"]
-script/source = "@icon(\"res://icons/2d/cross.svg\")
+[sub_resource type="GDScript" id="GDScript_5ooxk"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/checkmark-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_gywm2"]
-script/source = "@icon(\"res://icons/2d/diamond.svg\")
+[sub_resource type="GDScript" id="GDScript_4al8h"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/checkmark-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_dna55"]
-script/source = "@icon(\"res://icons/2d/dotspark-3.svg\")
+[sub_resource type="GDScript" id="GDScript_dxhsf"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/checkmark-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_e2u1a"]
-script/source = "@icon(\"res://icons/2d/dotspark.svg\")
+[sub_resource type="GDScript" id="GDScript_ep0ni"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/circle-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_lhklb"]
-script/source = "@icon(\"res://icons/2d/hexagon.svg\")
+[sub_resource type="GDScript" id="GDScript_e86fh"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/circle-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_2mdn3"]
-script/source = "@icon(\"res://icons/2d/plus.svg\")
+[sub_resource type="GDScript" id="GDScript_ooaon"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/circle-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_6j8sq"]
-script/source = "@icon(\"res://icons/2d/spark-full.svg\")
+[sub_resource type="GDScript" id="GDScript_j8dig"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/circle-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_fvyuk"]
-script/source = "@icon(\"res://icons/2d/spark-hollow.svg\")
+[sub_resource type="GDScript" id="GDScript_mxx1p"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/circle-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_ytidn"]
-script/source = "@icon(\"res://icons/2d/square.svg\")
+[sub_resource type="GDScript" id="GDScript_vac2o"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/cross-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_5ek6x"]
-script/source = "@icon(\"res://icons/2d/triangle-down.svg\")
+[sub_resource type="GDScript" id="GDScript_qti20"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/cross-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_0yawc"]
-script/source = "@icon(\"res://icons/2d/triangle-up.svg\")
+[sub_resource type="GDScript" id="GDScript_10dvo"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/cross-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_vjnhl"]
-script/source = "@icon(\"res://icons/2d/tricross.svg\")
+[sub_resource type="GDScript" id="GDScript_napvv"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/cross-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_efm0i"]
-script/source = "@icon(\"res://icons/3d/capsule.svg\")
+[sub_resource type="GDScript" id="GDScript_ggnun"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/cross-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_lj44t"]
-script/source = "@icon(\"res://icons/3d/cone.svg\")
+[sub_resource type="GDScript" id="GDScript_dc8ef"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/diamond-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_b63ge"]
-script/source = "@icon(\"res://icons/3d/cube.svg\")
+[sub_resource type="GDScript" id="GDScript_2dis3"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/diamond-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_lu7yd"]
-script/source = "@icon(\"res://icons/3d/cylinder.svg\")
+[sub_resource type="GDScript" id="GDScript_ph2xj"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/diamond-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_yqqlu"]
-script/source = "@icon(\"res://icons/3d/sphere.svg\")
+[sub_resource type="GDScript" id="GDScript_4iwwc"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/diamond-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_j3dic"]
-script/source = "@icon(\"res://icons/3d/torus.svg\")
+[sub_resource type="GDScript" id="GDScript_y7d5i"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/diamond-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_6ixd5"]
-script/source = "@icon(\"res://icons/creatures/demon.svg\")
+[sub_resource type="GDScript" id="GDScript_tq26f"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-3-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_nueid"]
-script/source = "@icon(\"res://icons/creatures/eye-hollow.svg\")
+[sub_resource type="GDScript" id="GDScript_h2qcd"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-3-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_t041b"]
-script/source = "@icon(\"res://icons/creatures/eye.svg\")
+[sub_resource type="GDScript" id="GDScript_fyjtl"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-3-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_5clil"]
-script/source = "@icon(\"res://icons/creatures/heart-full.svg\")
+[sub_resource type="GDScript" id="GDScript_303no"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-3-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_nlpmt"]
-script/source = "@icon(\"res://icons/creatures/heart-half.svg\")
+[sub_resource type="GDScript" id="GDScript_l6jwt"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-3-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_yrhvw"]
-script/source = "@icon(\"res://icons/creatures/heart.svg\")
+[sub_resource type="GDScript" id="GDScript_fq0rn"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_xwwfs"]
-script/source = "@icon(\"res://icons/creatures/person.svg\")
+[sub_resource type="GDScript" id="GDScript_kfk1l"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_cc8pu"]
-script/source = "@icon(\"res://icons/objects/ammo.svg\")
+[sub_resource type="GDScript" id="GDScript_rvooe"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_w6gj8"]
-script/source = "@icon(\"res://icons/objects/axe.svg\")
+[sub_resource type="GDScript" id="GDScript_7ja5v"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_cp1se"]
-script/source = "@icon(\"res://icons/objects/bell.svg\")
+[sub_resource type="GDScript" id="GDScript_v76ob"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/dotspark-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_khp3w"]
-script/source = "@icon(\"res://icons/objects/bill.svg\")
+[sub_resource type="GDScript" id="GDScript_anxgc"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/hexagon-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_cew8l"]
-script/source = "@icon(\"res://icons/objects/cd.svg\")
+[sub_resource type="GDScript" id="GDScript_3any2"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/hexagon-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_lfu6v"]
-script/source = "@icon(\"res://icons/objects/chain.svg\")
+[sub_resource type="GDScript" id="GDScript_2penb"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/hexagon-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_obk10"]
-script/source = "@icon(\"res://icons/objects/chest.svg\")
+[sub_resource type="GDScript" id="GDScript_wlk1l"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/hexagon-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_qptwj"]
-script/source = "@icon(\"res://icons/objects/clock.svg\")
+[sub_resource type="GDScript" id="GDScript_t0rc5"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/hexagon-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_2ew7y"]
-script/source = "@icon(\"res://icons/objects/coins.svg\")
+[sub_resource type="GDScript" id="GDScript_clbcp"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/plus-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_78nbn"]
-script/source = "@icon(\"res://icons/objects/floppy.svg\")
+[sub_resource type="GDScript" id="GDScript_i2vlr"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/plus-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_7nquw"]
-script/source = "@icon(\"res://icons/objects/globe.svg\")
+[sub_resource type="GDScript" id="GDScript_jdhte"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/plus-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_dhbuq"]
-script/source = "@icon(\"res://icons/objects/gun.svg\")
+[sub_resource type="GDScript" id="GDScript_iuiij"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/plus-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_41i6i"]
-script/source = "@icon(\"res://icons/objects/hammer.svg\")
+[sub_resource type="GDScript" id="GDScript_b35uf"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/plus-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_lo6a3"]
-script/source = "@icon(\"res://icons/objects/hourglass.svg\")
+[sub_resource type="GDScript" id="GDScript_5v1ml"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-full-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_pcbe7"]
-script/source = "@icon(\"res://icons/objects/lightning.svg\")
+[sub_resource type="GDScript" id="GDScript_c5twm"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-full-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_6so46"]
-script/source = "@icon(\"res://icons/objects/magnifying-glass.svg\")
+[sub_resource type="GDScript" id="GDScript_e678q"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-full-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_mfeae"]
-script/source = "@icon(\"res://icons/objects/pickaxe.svg\")
+[sub_resource type="GDScript" id="GDScript_3uugx"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-full-red.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_jurtx"]
-script/source = "@icon(\"res://icons/objects/shield.svg\")
+[sub_resource type="GDScript" id="GDScript_m6yy8"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-full-yellow.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_a674m"]
-script/source = "@icon(\"res://icons/objects/stopwatch.svg\")
+[sub_resource type="GDScript" id="GDScript_ukcxp"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-hollow-blue.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_0yg5u"]
-script/source = "@icon(\"res://icons/objects/sword.svg\")
+[sub_resource type="GDScript" id="GDScript_aqsfn"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-hollow-gray.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_4oqng"]
-script/source = "@icon(\"res://icons/objects/swords-crossed.svg\")
+[sub_resource type="GDScript" id="GDScript_dbfmx"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-hollow-green.png\")
 extends Node
 "
 
-[sub_resource type="GDScript" id="GDScript_fxt2l"]
-script/source = "@icon(\"res://icons/objects/trashcan.svg\")
+[sub_resource type="GDScript" id="GDScript_m77y2"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-hollow-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ras37"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/spark-hollow-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_klwhe"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/square-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_8og1g"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/square-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_nrxv1"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/square-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_s6u44"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/square-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ajnb1"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/square-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_p53el"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-down-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_yhgxk"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-down-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_6d5es"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-down-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_m8gy5"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-down-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_e0o86"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-down-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_hsu7g"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-up-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ngsrn"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-up-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4a41q"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-up-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ouow6"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-up-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_mn1p5"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/triangle-up-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_mpvvg"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/tricross-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_8tsxg"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/tricross-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_44kvi"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/tricross-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_qat7s"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/tricross-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_2v5an"]
+script/source = "@icon(\"res://addons/many-tags/icons/2d/tricross-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_urudb"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/capsule-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_p1nlo"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/capsule-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_pft6h"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/capsule-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_tyxyg"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/capsule-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_f3jsf"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/capsule-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_65klj"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cone-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_lhimu"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cone-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_hr3de"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cone-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_28p4h"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cone-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_kfbx0"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cone-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4tfws"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cube-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_mq4j0"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cube-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_m00sa"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cube-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_xoc4w"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cube-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_k6ehn"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cube-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_yq6s8"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cylinder-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fijjx"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cylinder-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ryt5j"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cylinder-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_luku3"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cylinder-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_phmkt"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/cylinder-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_753rp"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/sphere-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_drflv"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/sphere-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_tevav"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/sphere-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_wmd5j"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/sphere-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4hhpk"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/sphere-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_b8rk8"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/torus-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_2qjvx"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/torus-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_vr8c6"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/torus-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_dnhdv"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/torus-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_yj4fh"]
+script/source = "@icon(\"res://addons/many-tags/icons/3d/torus-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_2d8hs"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/demon-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_8wlk5"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/demon-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_watf5"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/demon-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_l1wc2"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/demon-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_o3sqn"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/demon-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_yfhtm"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_m0gy4"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_003wb"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ya4qr"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-hollow-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4hk8f"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-hollow-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_gqvjp"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-hollow-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_de54h"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-hollow-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_wy60c"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-hollow-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_xiavp"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_yywms"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/eye-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_i4ypv"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_p83hk"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-full-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_y12kq"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-full-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_3wrio"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-full-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_go4e3"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-full-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_6gotc"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-full-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ccue8"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4qe7l"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_a0by2"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-half-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_btqdd"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-half-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_jf7ob"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-half-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_bqanv"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-half-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_40lsx"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-half-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fkebs"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_p8jyu"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/heart-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_68ais"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/person-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_0ag0w"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/person-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fhyd3"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/person-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_52epa"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/person-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_pwb23"]
+script/source = "@icon(\"res://addons/many-tags/icons/creatures/person-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_lv4o0"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/ammo-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ekk52"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/ammo-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_5t4yy"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/ammo-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_o3x26"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/ammo-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_v5yk8"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/ammo-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_14qvs"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/axe-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_6wcxf"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/axe-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_py7os"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/axe-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_rm2bk"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/axe-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_rmrq5"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/axe-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_bw36y"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bell-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_6icfi"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bell-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_xf7kl"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bell-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_8jmaa"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bell-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4mnqk"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bell-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_8kbnf"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bill-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_s3g25"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bill-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_l70a8"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bill-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_sm4da"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bill-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_j11mo"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/bill-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ssssn"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/cd-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fifkr"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/cd-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_p2tw3"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/cd-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_gfu03"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/cd-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_nkmqw"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/cd-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_7shin"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chain-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_7xhj3"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chain-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_y12wy"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chain-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_vdvyl"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chain-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_y4f0e"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chain-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_6lf65"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chest-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_kycnx"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chest-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_40wma"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chest-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_2rclq"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chest-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_t25yl"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/chest-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_sfaai"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/clock-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_e2fwp"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/clock-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ikkf8"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/clock-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_8n2hb"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/clock-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ud6pg"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/clock-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_m6uth"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/coins-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_010em"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/coins-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fvtlq"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/coins-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_a1ovy"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/coins-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_70acd"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/coins-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4huk7"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/floppy-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_l3uym"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/floppy-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_n11hj"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/floppy-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ldbee"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/floppy-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ml8ci"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/floppy-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_0j5gv"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/globe-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4gbil"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/globe-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_nt6ut"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/globe-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_mylfi"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/globe-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_rbyu1"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/globe-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_w5b1y"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/gun-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_7ienj"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/gun-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fuwtk"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/gun-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_j5ria"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/gun-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_1bdkw"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/gun-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_bugdm"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hammer-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_0jt1s"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hammer-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_o2b1j"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hammer-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_xplsi"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hammer-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_1iyes"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hammer-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ssnoy"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hourglass-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_nwggh"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hourglass-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_gxapr"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hourglass-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_6oisv"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hourglass-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_envtn"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/hourglass-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_0et7c"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/lightning-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_nuhid"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/lightning-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_mgyeb"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/lightning-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_p86l6"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/lightning-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_2puxo"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/lightning-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_077ym"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/magnifying-glass-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_6x0kb"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/magnifying-glass-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ardp6"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/magnifying-glass-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_beqgp"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/magnifying-glass-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_khp5d"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/magnifying-glass-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_35qr0"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/pickaxe-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_cgn83"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/pickaxe-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_vafv6"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/pickaxe-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_1nqop"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/pickaxe-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_prngh"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/pickaxe-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_swnu5"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/shield-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_25w7q"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/shield-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_4n8rf"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/shield-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_g766g"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/shield-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_rktos"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/shield-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_8wx5q"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/stopwatch-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_bnrp2"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/stopwatch-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_h7460"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/stopwatch-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_mlhwk"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/stopwatch-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_drhv8"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/stopwatch-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_oe2i0"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/sword-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_xvvos"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/sword-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_o8hjq"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/sword-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_vsir0"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/sword-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_41s8b"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/sword-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_62cs6"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/swords-crossed-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_5tgng"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/swords-crossed-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fhxs7"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/swords-crossed-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_lj633"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/swords-crossed-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_jmllk"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/swords-crossed-yellow.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_o4elp"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/trashcan-blue.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_fihck"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/trashcan-gray.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_oxilx"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/trashcan-green.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_36viv"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/trashcan-red.png\")
+extends Node
+"
+
+[sub_resource type="GDScript" id="GDScript_ktn5k"]
+script/source = "@icon(\"res://addons/many-tags/icons/objects/trashcan-yellow.png\")
 extends Node
 "
 
@@ -252,155 +1232,743 @@ script = ExtResource("1_uakks")
 
 [node name="2d" type="Node" parent="."]
 
-[node name="checkmark" type="Node" parent="2d"]
-script = SubResource("GDScript_6mlk5")
+[node name="checkmark-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_ohj40")
 
-[node name="circle" type="Node" parent="2d"]
-script = SubResource("GDScript_kkm6m")
+[node name="checkmark-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_v2d6i")
 
-[node name="cross" type="Node" parent="2d"]
-script = SubResource("GDScript_h4op7")
+[node name="checkmark-green" type="Node" parent="2d"]
+script = SubResource("GDScript_5ooxk")
 
-[node name="diamond" type="Node" parent="2d"]
-script = SubResource("GDScript_gywm2")
+[node name="checkmark-red" type="Node" parent="2d"]
+script = SubResource("GDScript_4al8h")
 
-[node name="dotspark-3" type="Node" parent="2d"]
-script = SubResource("GDScript_dna55")
+[node name="checkmark-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_dxhsf")
 
-[node name="dotspark" type="Node" parent="2d"]
-script = SubResource("GDScript_e2u1a")
+[node name="circle-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_ep0ni")
 
-[node name="hexagon" type="Node" parent="2d"]
-script = SubResource("GDScript_lhklb")
+[node name="circle-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_e86fh")
 
-[node name="plus" type="Node" parent="2d"]
-script = SubResource("GDScript_2mdn3")
+[node name="circle-green" type="Node" parent="2d"]
+script = SubResource("GDScript_ooaon")
 
-[node name="spark-full" type="Node" parent="2d"]
-script = SubResource("GDScript_6j8sq")
+[node name="circle-red" type="Node" parent="2d"]
+script = SubResource("GDScript_j8dig")
 
-[node name="spark-hollow" type="Node" parent="2d"]
-script = SubResource("GDScript_fvyuk")
+[node name="circle-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_mxx1p")
 
-[node name="square" type="Node" parent="2d"]
-script = SubResource("GDScript_ytidn")
+[node name="cross-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_vac2o")
 
-[node name="triangle-down" type="Node" parent="2d"]
-script = SubResource("GDScript_5ek6x")
+[node name="cross-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_qti20")
 
-[node name="triangle-up" type="Node" parent="2d"]
-script = SubResource("GDScript_0yawc")
+[node name="cross-green" type="Node" parent="2d"]
+script = SubResource("GDScript_10dvo")
 
-[node name="tricross" type="Node" parent="2d"]
-script = SubResource("GDScript_vjnhl")
+[node name="cross-red" type="Node" parent="2d"]
+script = SubResource("GDScript_napvv")
+
+[node name="cross-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_ggnun")
+
+[node name="diamond-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_dc8ef")
+
+[node name="diamond-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_2dis3")
+
+[node name="diamond-green" type="Node" parent="2d"]
+script = SubResource("GDScript_ph2xj")
+
+[node name="diamond-red" type="Node" parent="2d"]
+script = SubResource("GDScript_4iwwc")
+
+[node name="diamond-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_y7d5i")
+
+[node name="dotspark-3-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_tq26f")
+
+[node name="dotspark-3-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_h2qcd")
+
+[node name="dotspark-3-green" type="Node" parent="2d"]
+script = SubResource("GDScript_fyjtl")
+
+[node name="dotspark-3-red" type="Node" parent="2d"]
+script = SubResource("GDScript_303no")
+
+[node name="dotspark-3-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_l6jwt")
+
+[node name="dotspark-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_fq0rn")
+
+[node name="dotspark-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_kfk1l")
+
+[node name="dotspark-green" type="Node" parent="2d"]
+script = SubResource("GDScript_rvooe")
+
+[node name="dotspark-red" type="Node" parent="2d"]
+script = SubResource("GDScript_7ja5v")
+
+[node name="dotspark-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_v76ob")
+
+[node name="hexagon-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_anxgc")
+
+[node name="hexagon-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_3any2")
+
+[node name="hexagon-green" type="Node" parent="2d"]
+script = SubResource("GDScript_2penb")
+
+[node name="hexagon-red" type="Node" parent="2d"]
+script = SubResource("GDScript_wlk1l")
+
+[node name="hexagon-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_t0rc5")
+
+[node name="plus-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_clbcp")
+
+[node name="plus-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_i2vlr")
+
+[node name="plus-green" type="Node" parent="2d"]
+script = SubResource("GDScript_jdhte")
+
+[node name="plus-red" type="Node" parent="2d"]
+script = SubResource("GDScript_iuiij")
+
+[node name="plus-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_b35uf")
+
+[node name="spark-full-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_5v1ml")
+
+[node name="spark-full-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_c5twm")
+
+[node name="spark-full-green" type="Node" parent="2d"]
+script = SubResource("GDScript_e678q")
+
+[node name="spark-full-red" type="Node" parent="2d"]
+script = SubResource("GDScript_3uugx")
+
+[node name="spark-full-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_m6yy8")
+
+[node name="spark-hollow-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_ukcxp")
+
+[node name="spark-hollow-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_aqsfn")
+
+[node name="spark-hollow-green" type="Node" parent="2d"]
+script = SubResource("GDScript_dbfmx")
+
+[node name="spark-hollow-red" type="Node" parent="2d"]
+script = SubResource("GDScript_m77y2")
+
+[node name="spark-hollow-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_ras37")
+
+[node name="square-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_klwhe")
+
+[node name="square-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_8og1g")
+
+[node name="square-green" type="Node" parent="2d"]
+script = SubResource("GDScript_nrxv1")
+
+[node name="square-red" type="Node" parent="2d"]
+script = SubResource("GDScript_s6u44")
+
+[node name="square-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_ajnb1")
+
+[node name="triangle-down-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_p53el")
+
+[node name="triangle-down-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_yhgxk")
+
+[node name="triangle-down-green" type="Node" parent="2d"]
+script = SubResource("GDScript_6d5es")
+
+[node name="triangle-down-red" type="Node" parent="2d"]
+script = SubResource("GDScript_m8gy5")
+
+[node name="triangle-down-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_e0o86")
+
+[node name="triangle-up-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_hsu7g")
+
+[node name="triangle-up-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_ngsrn")
+
+[node name="triangle-up-green" type="Node" parent="2d"]
+script = SubResource("GDScript_4a41q")
+
+[node name="triangle-up-red" type="Node" parent="2d"]
+script = SubResource("GDScript_ouow6")
+
+[node name="triangle-up-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_mn1p5")
+
+[node name="tricross-blue" type="Node" parent="2d"]
+script = SubResource("GDScript_mpvvg")
+
+[node name="tricross-gray" type="Node" parent="2d"]
+script = SubResource("GDScript_8tsxg")
+
+[node name="tricross-green" type="Node" parent="2d"]
+script = SubResource("GDScript_44kvi")
+
+[node name="tricross-red" type="Node" parent="2d"]
+script = SubResource("GDScript_qat7s")
+
+[node name="tricross-yellow" type="Node" parent="2d"]
+script = SubResource("GDScript_2v5an")
 
 [node name="3d" type="Node" parent="."]
 
-[node name="capsule" type="Node" parent="3d"]
-script = SubResource("GDScript_efm0i")
+[node name="capsule-blue" type="Node" parent="3d"]
+script = SubResource("GDScript_urudb")
 
-[node name="cone" type="Node" parent="3d"]
-script = SubResource("GDScript_lj44t")
+[node name="capsule-gray" type="Node" parent="3d"]
+script = SubResource("GDScript_p1nlo")
 
-[node name="cube" type="Node" parent="3d"]
-script = SubResource("GDScript_b63ge")
+[node name="capsule-green" type="Node" parent="3d"]
+script = SubResource("GDScript_pft6h")
 
-[node name="cylinder" type="Node" parent="3d"]
-script = SubResource("GDScript_lu7yd")
+[node name="capsule-red" type="Node" parent="3d"]
+script = SubResource("GDScript_tyxyg")
 
-[node name="sphere" type="Node" parent="3d"]
-script = SubResource("GDScript_yqqlu")
+[node name="capsule-yellow" type="Node" parent="3d"]
+script = SubResource("GDScript_f3jsf")
 
-[node name="torus" type="Node" parent="3d"]
-script = SubResource("GDScript_j3dic")
+[node name="cone-blue" type="Node" parent="3d"]
+script = SubResource("GDScript_65klj")
+
+[node name="cone-gray" type="Node" parent="3d"]
+script = SubResource("GDScript_lhimu")
+
+[node name="cone-green" type="Node" parent="3d"]
+script = SubResource("GDScript_hr3de")
+
+[node name="cone-red" type="Node" parent="3d"]
+script = SubResource("GDScript_28p4h")
+
+[node name="cone-yellow" type="Node" parent="3d"]
+script = SubResource("GDScript_kfbx0")
+
+[node name="cube-blue" type="Node" parent="3d"]
+script = SubResource("GDScript_4tfws")
+
+[node name="cube-gray" type="Node" parent="3d"]
+script = SubResource("GDScript_mq4j0")
+
+[node name="cube-green" type="Node" parent="3d"]
+script = SubResource("GDScript_m00sa")
+
+[node name="cube-red" type="Node" parent="3d"]
+script = SubResource("GDScript_xoc4w")
+
+[node name="cube-yellow" type="Node" parent="3d"]
+script = SubResource("GDScript_k6ehn")
+
+[node name="cylinder-blue" type="Node" parent="3d"]
+script = SubResource("GDScript_yq6s8")
+
+[node name="cylinder-gray" type="Node" parent="3d"]
+script = SubResource("GDScript_fijjx")
+
+[node name="cylinder-green" type="Node" parent="3d"]
+script = SubResource("GDScript_ryt5j")
+
+[node name="cylinder-red" type="Node" parent="3d"]
+script = SubResource("GDScript_luku3")
+
+[node name="cylinder-yellow" type="Node" parent="3d"]
+script = SubResource("GDScript_phmkt")
+
+[node name="sphere-blue" type="Node" parent="3d"]
+script = SubResource("GDScript_753rp")
+
+[node name="sphere-gray" type="Node" parent="3d"]
+script = SubResource("GDScript_drflv")
+
+[node name="sphere-green" type="Node" parent="3d"]
+script = SubResource("GDScript_tevav")
+
+[node name="sphere-red" type="Node" parent="3d"]
+script = SubResource("GDScript_wmd5j")
+
+[node name="sphere-yellow" type="Node" parent="3d"]
+script = SubResource("GDScript_4hhpk")
+
+[node name="torus-blue" type="Node" parent="3d"]
+script = SubResource("GDScript_b8rk8")
+
+[node name="torus-gray" type="Node" parent="3d"]
+script = SubResource("GDScript_2qjvx")
+
+[node name="torus-green" type="Node" parent="3d"]
+script = SubResource("GDScript_vr8c6")
+
+[node name="torus-red" type="Node" parent="3d"]
+script = SubResource("GDScript_dnhdv")
+
+[node name="torus-yellow" type="Node" parent="3d"]
+script = SubResource("GDScript_yj4fh")
 
 [node name="creatures" type="Node" parent="."]
 
-[node name="demon" type="Node" parent="creatures"]
-script = SubResource("GDScript_6ixd5")
+[node name="demon-blue" type="Node" parent="creatures"]
+script = SubResource("GDScript_2d8hs")
 
-[node name="eye-hollow" type="Node" parent="creatures"]
-script = SubResource("GDScript_nueid")
+[node name="demon-gray" type="Node" parent="creatures"]
+script = SubResource("GDScript_8wlk5")
 
-[node name="eye" type="Node" parent="creatures"]
-script = SubResource("GDScript_t041b")
+[node name="demon-green" type="Node" parent="creatures"]
+script = SubResource("GDScript_watf5")
 
-[node name="heart-full" type="Node" parent="creatures"]
-script = SubResource("GDScript_5clil")
+[node name="demon-red" type="Node" parent="creatures"]
+script = SubResource("GDScript_l1wc2")
 
-[node name="heart-half" type="Node" parent="creatures"]
-script = SubResource("GDScript_nlpmt")
+[node name="demon-yellow" type="Node" parent="creatures"]
+script = SubResource("GDScript_o3sqn")
 
-[node name="heart" type="Node" parent="creatures"]
-script = SubResource("GDScript_yrhvw")
+[node name="eye-blue" type="Node" parent="creatures"]
+script = SubResource("GDScript_yfhtm")
 
-[node name="person" type="Node" parent="creatures"]
-script = SubResource("GDScript_xwwfs")
+[node name="eye-gray" type="Node" parent="creatures"]
+script = SubResource("GDScript_m0gy4")
+
+[node name="eye-green" type="Node" parent="creatures"]
+script = SubResource("GDScript_003wb")
+
+[node name="eye-hollow-blue" type="Node" parent="creatures"]
+script = SubResource("GDScript_ya4qr")
+
+[node name="eye-hollow-gray" type="Node" parent="creatures"]
+script = SubResource("GDScript_4hk8f")
+
+[node name="eye-hollow-green" type="Node" parent="creatures"]
+script = SubResource("GDScript_gqvjp")
+
+[node name="eye-hollow-red" type="Node" parent="creatures"]
+script = SubResource("GDScript_de54h")
+
+[node name="eye-hollow-yellow" type="Node" parent="creatures"]
+script = SubResource("GDScript_wy60c")
+
+[node name="eye-red" type="Node" parent="creatures"]
+script = SubResource("GDScript_xiavp")
+
+[node name="eye-yellow" type="Node" parent="creatures"]
+script = SubResource("GDScript_yywms")
+
+[node name="heart-blue" type="Node" parent="creatures"]
+script = SubResource("GDScript_i4ypv")
+
+[node name="heart-full-blue" type="Node" parent="creatures"]
+script = SubResource("GDScript_p83hk")
+
+[node name="heart-full-gray" type="Node" parent="creatures"]
+script = SubResource("GDScript_y12kq")
+
+[node name="heart-full-green" type="Node" parent="creatures"]
+script = SubResource("GDScript_3wrio")
+
+[node name="heart-full-red" type="Node" parent="creatures"]
+script = SubResource("GDScript_go4e3")
+
+[node name="heart-full-yellow" type="Node" parent="creatures"]
+script = SubResource("GDScript_6gotc")
+
+[node name="heart-gray" type="Node" parent="creatures"]
+script = SubResource("GDScript_ccue8")
+
+[node name="heart-green" type="Node" parent="creatures"]
+script = SubResource("GDScript_4qe7l")
+
+[node name="heart-half-blue" type="Node" parent="creatures"]
+script = SubResource("GDScript_a0by2")
+
+[node name="heart-half-gray" type="Node" parent="creatures"]
+script = SubResource("GDScript_btqdd")
+
+[node name="heart-half-green" type="Node" parent="creatures"]
+script = SubResource("GDScript_jf7ob")
+
+[node name="heart-half-red" type="Node" parent="creatures"]
+script = SubResource("GDScript_bqanv")
+
+[node name="heart-half-yellow" type="Node" parent="creatures"]
+script = SubResource("GDScript_40lsx")
+
+[node name="heart-red" type="Node" parent="creatures"]
+script = SubResource("GDScript_fkebs")
+
+[node name="heart-yellow" type="Node" parent="creatures"]
+script = SubResource("GDScript_p8jyu")
+
+[node name="person-blue" type="Node" parent="creatures"]
+script = SubResource("GDScript_68ais")
+
+[node name="person-gray" type="Node" parent="creatures"]
+script = SubResource("GDScript_0ag0w")
+
+[node name="person-green" type="Node" parent="creatures"]
+script = SubResource("GDScript_fhyd3")
+
+[node name="person-red" type="Node" parent="creatures"]
+script = SubResource("GDScript_52epa")
+
+[node name="person-yellow" type="Node" parent="creatures"]
+script = SubResource("GDScript_pwb23")
 
 [node name="objects" type="Node" parent="."]
 
-[node name="ammo" type="Node" parent="objects"]
-script = SubResource("GDScript_cc8pu")
+[node name="ammo-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_lv4o0")
 
-[node name="axe" type="Node" parent="objects"]
-script = SubResource("GDScript_w6gj8")
+[node name="ammo-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_ekk52")
 
-[node name="bell" type="Node" parent="objects"]
-script = SubResource("GDScript_cp1se")
+[node name="ammo-green" type="Node" parent="objects"]
+script = SubResource("GDScript_5t4yy")
 
-[node name="bill" type="Node" parent="objects"]
-script = SubResource("GDScript_khp3w")
+[node name="ammo-red" type="Node" parent="objects"]
+script = SubResource("GDScript_o3x26")
 
-[node name="cd" type="Node" parent="objects"]
-script = SubResource("GDScript_cew8l")
+[node name="ammo-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_v5yk8")
 
-[node name="chain" type="Node" parent="objects"]
-script = SubResource("GDScript_lfu6v")
+[node name="axe-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_14qvs")
 
-[node name="chest" type="Node" parent="objects"]
-script = SubResource("GDScript_obk10")
+[node name="axe-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_6wcxf")
 
-[node name="clock" type="Node" parent="objects"]
-script = SubResource("GDScript_qptwj")
+[node name="axe-green" type="Node" parent="objects"]
+script = SubResource("GDScript_py7os")
 
-[node name="coins" type="Node" parent="objects"]
-script = SubResource("GDScript_2ew7y")
+[node name="axe-red" type="Node" parent="objects"]
+script = SubResource("GDScript_rm2bk")
 
-[node name="floppy" type="Node" parent="objects"]
-script = SubResource("GDScript_78nbn")
+[node name="axe-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_rmrq5")
 
-[node name="globe" type="Node" parent="objects"]
-script = SubResource("GDScript_7nquw")
+[node name="bell-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_bw36y")
 
-[node name="gun" type="Node" parent="objects"]
-script = SubResource("GDScript_dhbuq")
+[node name="bell-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_6icfi")
 
-[node name="hammer" type="Node" parent="objects"]
-script = SubResource("GDScript_41i6i")
+[node name="bell-green" type="Node" parent="objects"]
+script = SubResource("GDScript_xf7kl")
 
-[node name="hourglass" type="Node" parent="objects"]
-script = SubResource("GDScript_lo6a3")
+[node name="bell-red" type="Node" parent="objects"]
+script = SubResource("GDScript_8jmaa")
 
-[node name="lightning" type="Node" parent="objects"]
-script = SubResource("GDScript_pcbe7")
+[node name="bell-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_4mnqk")
 
-[node name="magnifying-glass" type="Node" parent="objects"]
-script = SubResource("GDScript_6so46")
+[node name="bill-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_8kbnf")
 
-[node name="pickaxe" type="Node" parent="objects"]
-script = SubResource("GDScript_mfeae")
+[node name="bill-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_s3g25")
 
-[node name="shield" type="Node" parent="objects"]
-script = SubResource("GDScript_jurtx")
+[node name="bill-green" type="Node" parent="objects"]
+script = SubResource("GDScript_l70a8")
 
-[node name="stopwatch" type="Node" parent="objects"]
-script = SubResource("GDScript_a674m")
+[node name="bill-red" type="Node" parent="objects"]
+script = SubResource("GDScript_sm4da")
 
-[node name="sword" type="Node" parent="objects"]
-script = SubResource("GDScript_0yg5u")
+[node name="bill-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_j11mo")
 
-[node name="swords-crossed" type="Node" parent="objects"]
-script = SubResource("GDScript_4oqng")
+[node name="cd-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_ssssn")
 
-[node name="trashcan" type="Node" parent="objects"]
-script = SubResource("GDScript_fxt2l")
+[node name="cd-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_fifkr")
+
+[node name="cd-green" type="Node" parent="objects"]
+script = SubResource("GDScript_p2tw3")
+
+[node name="cd-red" type="Node" parent="objects"]
+script = SubResource("GDScript_gfu03")
+
+[node name="cd-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_nkmqw")
+
+[node name="chain-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_7shin")
+
+[node name="chain-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_7xhj3")
+
+[node name="chain-green" type="Node" parent="objects"]
+script = SubResource("GDScript_y12wy")
+
+[node name="chain-red" type="Node" parent="objects"]
+script = SubResource("GDScript_vdvyl")
+
+[node name="chain-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_y4f0e")
+
+[node name="chest-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_6lf65")
+
+[node name="chest-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_kycnx")
+
+[node name="chest-green" type="Node" parent="objects"]
+script = SubResource("GDScript_40wma")
+
+[node name="chest-red" type="Node" parent="objects"]
+script = SubResource("GDScript_2rclq")
+
+[node name="chest-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_t25yl")
+
+[node name="clock-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_sfaai")
+
+[node name="clock-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_e2fwp")
+
+[node name="clock-green" type="Node" parent="objects"]
+script = SubResource("GDScript_ikkf8")
+
+[node name="clock-red" type="Node" parent="objects"]
+script = SubResource("GDScript_8n2hb")
+
+[node name="clock-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_ud6pg")
+
+[node name="coins-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_m6uth")
+
+[node name="coins-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_010em")
+
+[node name="coins-green" type="Node" parent="objects"]
+script = SubResource("GDScript_fvtlq")
+
+[node name="coins-red" type="Node" parent="objects"]
+script = SubResource("GDScript_a1ovy")
+
+[node name="coins-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_70acd")
+
+[node name="floppy-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_4huk7")
+
+[node name="floppy-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_l3uym")
+
+[node name="floppy-green" type="Node" parent="objects"]
+script = SubResource("GDScript_n11hj")
+
+[node name="floppy-red" type="Node" parent="objects"]
+script = SubResource("GDScript_ldbee")
+
+[node name="floppy-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_ml8ci")
+
+[node name="globe-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_0j5gv")
+
+[node name="globe-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_4gbil")
+
+[node name="globe-green" type="Node" parent="objects"]
+script = SubResource("GDScript_nt6ut")
+
+[node name="globe-red" type="Node" parent="objects"]
+script = SubResource("GDScript_mylfi")
+
+[node name="globe-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_rbyu1")
+
+[node name="gun-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_w5b1y")
+
+[node name="gun-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_7ienj")
+
+[node name="gun-green" type="Node" parent="objects"]
+script = SubResource("GDScript_fuwtk")
+
+[node name="gun-red" type="Node" parent="objects"]
+script = SubResource("GDScript_j5ria")
+
+[node name="gun-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_1bdkw")
+
+[node name="hammer-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_bugdm")
+
+[node name="hammer-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_0jt1s")
+
+[node name="hammer-green" type="Node" parent="objects"]
+script = SubResource("GDScript_o2b1j")
+
+[node name="hammer-red" type="Node" parent="objects"]
+script = SubResource("GDScript_xplsi")
+
+[node name="hammer-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_1iyes")
+
+[node name="hourglass-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_ssnoy")
+
+[node name="hourglass-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_nwggh")
+
+[node name="hourglass-green" type="Node" parent="objects"]
+script = SubResource("GDScript_gxapr")
+
+[node name="hourglass-red" type="Node" parent="objects"]
+script = SubResource("GDScript_6oisv")
+
+[node name="hourglass-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_envtn")
+
+[node name="lightning-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_0et7c")
+
+[node name="lightning-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_nuhid")
+
+[node name="lightning-green" type="Node" parent="objects"]
+script = SubResource("GDScript_mgyeb")
+
+[node name="lightning-red" type="Node" parent="objects"]
+script = SubResource("GDScript_p86l6")
+
+[node name="lightning-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_2puxo")
+
+[node name="magnifying-glass-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_077ym")
+
+[node name="magnifying-glass-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_6x0kb")
+
+[node name="magnifying-glass-green" type="Node" parent="objects"]
+script = SubResource("GDScript_ardp6")
+
+[node name="magnifying-glass-red" type="Node" parent="objects"]
+script = SubResource("GDScript_beqgp")
+
+[node name="magnifying-glass-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_khp5d")
+
+[node name="pickaxe-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_35qr0")
+
+[node name="pickaxe-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_cgn83")
+
+[node name="pickaxe-green" type="Node" parent="objects"]
+script = SubResource("GDScript_vafv6")
+
+[node name="pickaxe-red" type="Node" parent="objects"]
+script = SubResource("GDScript_1nqop")
+
+[node name="pickaxe-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_prngh")
+
+[node name="shield-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_swnu5")
+
+[node name="shield-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_25w7q")
+
+[node name="shield-green" type="Node" parent="objects"]
+script = SubResource("GDScript_4n8rf")
+
+[node name="shield-red" type="Node" parent="objects"]
+script = SubResource("GDScript_g766g")
+
+[node name="shield-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_rktos")
+
+[node name="stopwatch-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_8wx5q")
+
+[node name="stopwatch-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_bnrp2")
+
+[node name="stopwatch-green" type="Node" parent="objects"]
+script = SubResource("GDScript_h7460")
+
+[node name="stopwatch-red" type="Node" parent="objects"]
+script = SubResource("GDScript_mlhwk")
+
+[node name="stopwatch-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_drhv8")
+
+[node name="sword-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_oe2i0")
+
+[node name="sword-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_xvvos")
+
+[node name="sword-green" type="Node" parent="objects"]
+script = SubResource("GDScript_o8hjq")
+
+[node name="sword-red" type="Node" parent="objects"]
+script = SubResource("GDScript_vsir0")
+
+[node name="sword-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_41s8b")
+
+[node name="swords-crossed-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_62cs6")
+
+[node name="swords-crossed-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_5tgng")
+
+[node name="swords-crossed-green" type="Node" parent="objects"]
+script = SubResource("GDScript_fhxs7")
+
+[node name="swords-crossed-red" type="Node" parent="objects"]
+script = SubResource("GDScript_lj633")
+
+[node name="swords-crossed-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_jmllk")
+
+[node name="trashcan-blue" type="Node" parent="objects"]
+script = SubResource("GDScript_o4elp")
+
+[node name="trashcan-gray" type="Node" parent="objects"]
+script = SubResource("GDScript_fihck")
+
+[node name="trashcan-green" type="Node" parent="objects"]
+script = SubResource("GDScript_oxilx")
+
+[node name="trashcan-red" type="Node" parent="objects"]
+script = SubResource("GDScript_36viv")
+
+[node name="trashcan-yellow" type="Node" parent="objects"]
+script = SubResource("GDScript_ktn5k")
