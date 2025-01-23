@@ -4,7 +4,7 @@
 ./sh/build.sh
 
 # Copy icons to site
-cp -r build/icons site/
+cp -r build/site/icons site/
 
 # Copy bundle
 bundle="$(echo build/*.zip)"

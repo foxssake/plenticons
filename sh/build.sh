@@ -17,29 +17,44 @@ mkdir -p build
 echo "" > build/.gdignore
 
 # Generate variants
-cp -r icons/ build/
+CATEGORIES="$(echo icons/*)"
+for CATEGORY in $CATEGORIES; do
+    CATEGORY="$(basename "$CATEGORY")"
+    mkdir -p "build/bundle/icons/64x-hidpi/$CATEGORY"
+    mkdir -p "build/bundle/icons/16x/$CATEGORY"
+    mkdir -p "build/site/icons/$CATEGORY"
 
-ICONS="$(find build/ -name "*.svg")"
-for ICON in $ICONS; do
-    for VARIANT_NAME in ${!COLORS[@]}; do
-        VARIANT_COLOR="${COLORS[$VARIANT_NAME]}"
-        OUTPUT="${ICON%.*}-$VARIANT_NAME.svg"
+    ICONS="$(find "icons/$CATEGORY" -type f -name *.svg)"
+    for ICON in $ICONS; do
+        ICON="$(basename "$ICON")"
+        ICON="${ICON%.*}"
 
-        echo "Generating variant $VARIANT_NAME for $(basename $ICON)"
+        for VARIANT_NAME in ${!COLORS[@]}; do
+            VARIANT_COLOR="${COLORS[$VARIANT_NAME]}"
+            INPUT="icons/$CATEGORY/$ICON.svg"
+            OUT="$ICON-$VARIANT_NAME"
+            
+            echo "Generating variant $VARIANT_NAME for $CATEGORY/$ICON"
 
-        cat "$ICON" |\
-            sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
-            # rsvg-convert --zoom 4 --format svg |\
-            # svgo --multipass - \
-            cat \
-            > "$OUTPUT"
+            cat "$INPUT" |\
+                sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
+                rsvg-convert |\
+                pngquant --strip --posterize 1 --speed 2 - |\
+                cat > "build/bundle/icons/16x/$CATEGORY/$OUT.png"
+
+            cat "$INPUT" |\
+                sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
+                rsvg-convert --zoom 4 |\
+                pngquant --strip --posterize 1 --speed 2 - |\
+                cat > "build/bundle/icons/64x-hidpi/$CATEGORY/$OUT.png"
+
+            cat "$INPUT" |\
+                sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
+                svgo - |\
+                cat > "build/site/icons/$CATEGORY/$OUT.svg"
+        done;
     done;
-
-    rm "$ICON"
 done;
-
-# Clean any .import or other files
-find build/icons -type f -not -name "*.svg" -exec rm {} \;
 
 # Prepare addon
 version="$(sh/version.sh)"
@@ -49,7 +64,7 @@ addon_root="$root/build/many-tags-v${version}/addons/many-tags/"
 mkdir -p "$addon_root"
 
 cp addons/many-tags/* "$addon_root"
-cp -r build/icons "$addon_root"
+cp -r build/bundle/icons "$addon_root"
 
 (
     cd build
