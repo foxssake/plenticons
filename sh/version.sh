@@ -1,6 +1,6 @@
 #!/bin/bash
 
-version="$(sed -n "s/version=\"\([^\"]*\)\"/\1/p" addons/many-tags/plugin.cfg)"
+version="$(sed -n "s/version=\"\([^\"]*\)\"/\1/p" addons/plenticons/plugin.cfg)"
 
 version_major="$(echo ${version} | cut -f1 -d.)"
 version_minor="$(echo ${version} | cut -f2 -d.)"
@@ -37,7 +37,7 @@ elif [ $1 == "envvar" ]; then
 fi
 
 if [ "$persist" = "true" ]; then
-    sed -i "s/version=.*/version=\"$version\"/g" "addons/many-tags/plugin.cfg"
+    sed -i "s/version=.*/version=\"$version\"/g" "addons/plenticons/plugin.cfg"
 fi
 
 echo "$version"

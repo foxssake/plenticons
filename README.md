@@ -1,6 +1,6 @@
-# ManyTags
+# plenticons
 
-ManyTags is a pack of icons to use with custom nodes in the [Godot] editor.
+plenticons is a pack of icons to use with custom nodes in the [Godot] editor.
 
 Often, when working on projects, it would be nice to have some custom icons for
 specific nodes, but finishing the project is a big enough task in itself.

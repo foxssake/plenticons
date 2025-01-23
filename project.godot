@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="ManyTags"
+config/name="plenticons"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/many-tags/plugin.cfg")
+enabled=PackedStringArray("res://addons/plenticons/plugin.cfg")
