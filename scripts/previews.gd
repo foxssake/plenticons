@@ -8,7 +8,7 @@ func generate_previews():
 		child.queue_free()
 
 	# Generate previews
-	var directory = "res://addons/many-tags/icons"
+	var directory = "res://icons"
 	var da := DirAccess.open(directory)
 	var dummy_script := load("res://scripts/dummy-script.gd") as Script
 
