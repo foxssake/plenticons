@@ -235,7 +235,12 @@ function capitalize(text) {
 }
 
 function unslug(text) {
-  return capitalize(text.replace(/\-/, ' '))
+  const knownSlugs = {
+    '2d': '2D',
+    '3d': '3D',
+    'foxs-sake': 'Fox\'s Sake'
+  }
+  return knownSlugs[text] || capitalize(text.replace(/\-/, ' '))
 }
 
 async function main() {
@@ -248,7 +253,7 @@ async function main() {
 
   for (const [categoryName, categoryIcons] of Object.entries(manifest.icons)) {
     const categoryHeader = document.createElement('h3')
-    categoryHeader.innerText = capitalize(categoryName);
+    categoryHeader.innerText = unslug(categoryName);
     iconCardContainer.appendChild(categoryHeader);
 
     for (const iconName of categoryIcons) {

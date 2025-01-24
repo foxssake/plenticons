@@ -6,6 +6,9 @@
 # Copy icons to site
 cp -r build/site/icons site/
 
+# Add favicon
+rsvg-convert --zoom 2 icon.svg > site/favicon.png
+
 # Copy bundle
 bundle="$(echo build/*.zip)"
 bundle="$(basename "$bundle")"
