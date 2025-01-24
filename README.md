@@ -62,15 +62,15 @@ To pick an icon visually, browsing the [site] and clicking on an icon will show
 the corresponding code snippet. Clicking on the snippet will automatically copy
 it to the clipboard.
 
-## License
-
-*plenticons* is under the [CC0 1.0 license](LICENSE).
-
 ## Support
 
 If you've found *plenticons* useful, feel free to fund us on ko-fi:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T8WZD0W)
+
+## License
+
+*plenticons* is under the [CC0 1.0 license](LICENSE).
 
 [Dedicated site]: https://foxssake.github.io/plenticons/
 [Godot]: https://godotengine.org/
