@@ -1,4 +1,12 @@
+![plenticons](./icon.png)
+
 # plenticons
+
+[![License](https://img.shields.io/github/license/foxssake/plenticons)](https://github.com/foxssake/plenticons/blob/main/LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/foxssake/plenticons)](https://github.com/foxssake/plenticons/releases)
+[![Site](https://img.shields.io/badge/Site-github.io-blue)](https://foxssake.github.io/plenticons/)
+[![Discord](https://img.shields.io/discord/1253434107656933447?logo=discord&label=Discord)](https://discord.gg/xWGh4GskG5)
+[![ko-fi](https://img.shields.io/badge/Support%20on-ko--fi-ff5e5b?logo=ko-fi)](https://ko-fi.com/T6T8WZD0W)
 
 plenticons is a pack of icons to use with custom nodes in the [Godot] editor.
 
