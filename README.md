@@ -8,7 +8,8 @@
 [![Discord](https://img.shields.io/discord/1253434107656933447?logo=discord&label=Discord)](https://discord.gg/xWGh4GskG5)
 [![ko-fi](https://img.shields.io/badge/Support%20on-ko--fi-ff5e5b?logo=ko-fi)](https://ko-fi.com/T6T8WZD0W)
 
-A pack of icons to use with custom nodes in the [Godot] editor. Or wherever else!
+A pack of icons to use with custom nodes in the [Godot] editor. Or wherever
+else!
 
 ## Features
 
@@ -46,7 +47,8 @@ Depending on your preference, you may:
 
 ## Usage
 
-After importing the addon to your Godot project, use the `@icon` annotation on your custom scripts, e.g.:
+After importing the addon to your Godot project, use the `@icon` annotation on
+your custom scripts, e.g.:
 
 ```gdscript
 @icon("res://addons/plenticons/icons/16x/foxs-sake/plenticons-yellow.png")
