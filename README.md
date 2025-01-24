@@ -37,8 +37,42 @@ included, to be used as masks, or tinting.
 And with its permissive license, *plenticons* can be used outside of the Godot
 editor, in your games, applications, wherever you deem fit!
 
-If you've found *plenticons* useful, consider supporting us on [Ko-fi].
+## Install
+
+Depending on your preference, you may:
+
+* Download from the Godot Asset Library, searching for *plenticons*
+* Download the latest [release] from Github
+
+## Usage
+
+After importing the addon to your Godot project, use the `@icon` annotation on your custom scripts, e.g.:
+
+```gdscript
+@icon("res://addons/plenticons/icons/16x/foxs-sake/plenticons-yellow.png")
+```
+
+For the HiDPI version, replace `16x` with `64x-hidpi` in the path:
+
+```gdscript
+@icon("res://addons/plenticons/icons/64x-hidpi/foxs-sake/plenticons-yellow.png")
+```
+
+To pick an icon visually, browsing the [site] and clicking on an icon will show
+the corresponding code snippet. Clicking on the snippet will automatically copy
+it to the clipboard.
+
+## License
+
+*plenticons* is under the [CC0 1.0 license](LICENSE).
+
+## Support
+
+If you've found *plenticons* useful, feel free to fund us on ko-fi:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T8WZD0W)
 
 [Dedicated site]: https://foxssake.github.io/plenticons/
-[Ko-fi]: https://ko-fi.com/foxssake
 [Godot]: https://godotengine.org/
+[release]: https://github.com/foxssake/plenticons/releases
+[site]: https://foxssake.github.io/plenticons/
