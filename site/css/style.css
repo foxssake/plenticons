@@ -16,6 +16,8 @@
   --variant-green: #8eef97;
   --variant-yellow: #ffca5f;
   --variant-gray: #e0e0e0;
+  --variant-white: #ffffff;
+  --variant-black: #000000;
 }
 
 body {
@@ -93,6 +95,10 @@ input {
   border-radius: 1em;
 }
 
+.variant-color-gray {
+  background-color: var(--variant-gray);
+}
+
 .variant-color-red {
   background-color: var(--variant-red);
 }
@@ -109,8 +115,12 @@ input {
   background-color: var(--variant-yellow);
 }
 
-.variant-color-gray {
-  background-color: var(--variant-gray);
+.variant-color-white {
+  background-color: var(--variant-white);
+}
+
+.variant-color-black {
+  background-color: var(--variant-black);
 }
 
 img.icon-inline {
