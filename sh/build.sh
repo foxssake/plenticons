@@ -7,6 +7,8 @@ declare -A COLORS=(\
     ["blue"]="#8da5f3"
     ["green"]="#8eef97"
     ["yellow"]="#ffca5f"
+    ["white"]="#ffffff"
+    ["black"]="#000000"
 )
 
 BASE_COLOR="${COLORS[red]}"
@@ -24,7 +26,7 @@ for CATEGORY in $CATEGORIES; do
     mkdir -p "build/bundle/icons/16x/$CATEGORY"
     mkdir -p "build/site/icons/$CATEGORY"
 
-    ICONS="$(find "icons/$CATEGORY" -type f -name *.svg)"
+    ICONS="$(find "icons/$CATEGORY" -type f -name "*.svg")"
     for ICON in $ICONS; do
         ICON="$(basename "$ICON")"
         ICON="${ICON%.*}"

@@ -1,4 +1,4 @@
-const VARIANTS = ['gray', 'red', 'blue', 'green', 'yellow']
+const VARIANTS = ['gray', 'red', 'blue', 'green', 'yellow', 'white', 'black']
 const MANIFEST = {}
 
 class Icon extends HTMLElement {
