@@ -42,8 +42,9 @@ editor, in your games, applications, wherever you deem fit!
 
 Depending on your preference, you may:
 
-* Download from the Godot Asset Library, searching for *plenticons*
+* Download from the [Godot Asset Library], searching for *plenticons*
 * Download the latest [release] from Github
+* Download from [itch.io].
 
 ## Usage
 
@@ -76,5 +77,7 @@ If you've found *plenticons* useful, feel free to fund us on ko-fi:
 
 [Dedicated site]: https://foxssake.github.io/plenticons/
 [Godot]: https://godotengine.org/
+[Godot Asset Library]: https://godotengine.org/asset-library/asset/3660
+[itch.io]: https://foxssake.itch.io/plenticons
 [release]: https://github.com/foxssake/plenticons/releases
 [site]: https://foxssake.github.io/plenticons/
