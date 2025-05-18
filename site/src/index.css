@@ -18,10 +18,14 @@
   --variant-gray: #e0e0e0;
   --variant-white: #ffffff;
   --variant-black: #000000;
+
+  --content-bg-color: var(--godot-mid);
+
+  background-color: var(--godot-dark);
 }
 
 body {
-  background-color: var(--godot-dark);
+  background-color: var(--content-bg-color);
   color: var(--godot-text);
   font-family: sans-serif;
 
@@ -92,7 +96,7 @@ input {
 .toolbar {
   position: sticky;
   top: 0;
-  background-color: inherit;
+  background-color: var(--content-bg-color);
 }
 
 .variant-circle {

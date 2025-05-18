@@ -1,7 +1,8 @@
-import { IconCard } from "./IconCard"
-import { IconModal } from "./IconModal"
-import { DefaultVariant, manifest, unslug } from "./plenticons"
+import { useState } from "react"
+import { IconCardContainer } from "./IconCardContainer"
+import { DefaultVariant, type Category } from "./plenticons"
 import { Toolbar } from "./Toolbar"
+import { IconModal } from "./IconModal"
 
 function Header() {
   return (
@@ -23,22 +24,21 @@ function Header() {
   )
 }
 
+type ModalState = {
+  name: string;
+  category: Category;
+};
 
 function App() {
+  const [variant, setVariant] = useState(DefaultVariant);
+  const [modal, setModal] = useState<ModalState | undefined>(undefined);
+
   return (
     <>
       <Header/>
-      <Toolbar/>
-      { /* TODO: Refactor */ }
-      <div className="icon-card-container">
-        {Object.entries(manifest.icons).map(([category, icons]) => (
-          <>
-          <h3>{unslug(category)}</h3>
-          {icons.map(icon => <IconCard category={category} name={icon} variant={DefaultVariant} />)}
-          </>
-        )) }
-      </div>
-      <IconModal />
+      <Toolbar onVariant={setVariant}/>
+      <IconCardContainer variant={variant} onIcon={(category: Category, name: string) => setModal({ category, name })} />
+      { modal && <IconModal category={modal.category} name={modal.name} variant={variant} onClose={() => setModal(undefined)}/>}
     </>
   )
 }
