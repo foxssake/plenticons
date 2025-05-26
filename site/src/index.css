@@ -31,6 +31,7 @@ body {
 
   max-width: 100vh;
   margin: auto;
+  padding: 1em;
 }
 
 h1 {
@@ -189,9 +190,11 @@ img.icon-inline {
   display: flex;
   align-items: center;
   padding: 2pt;
-  width: 64ch;
+  margin: 2pt;
+  width: 100%;
   max-width: 80vw;
   background-color: var(--godot-mid);
+  font-family: monospace;
 }
 
 .icon-snippet > input {
