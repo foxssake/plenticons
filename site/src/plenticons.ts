@@ -40,7 +40,7 @@ export function unslug(text: string): string {
     'foxs-sake': 'Fox\'s Sake'
   }
 
-  return knownSlugs[text] || capitalize(text.replace(/\-/, ' '))
+  return knownSlugs[text] || capitalize(text.replace(/-/, ' '))
 }
 
 export function getIconPath(category: Category, name: string, variant: Variant): string {
