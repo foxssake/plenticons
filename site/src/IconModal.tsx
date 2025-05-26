@@ -31,7 +31,6 @@ function CopyInput(props: { value: string }) {
 export function IconModal(props: IconModalProps) {
   const [variant, setVariant] = useState(props.variant)
 
-  // TODO: Copy on click
   return (
     <div className="modal" onClick={props.onClose}>
       <div className="icon-modal" onClick={e => e.stopPropagation()}>
