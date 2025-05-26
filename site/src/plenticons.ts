@@ -14,10 +14,10 @@ export type Resolution = typeof Resolutions[number];
 
 export type Category = string;
 
-export type Manifest = {
+export interface Manifest {
   icons: Record<Category, string[]>;
   bundle: string;
-};
+}
 
 export const manifest: Manifest = rawManifest;
 

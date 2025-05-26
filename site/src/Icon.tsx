@@ -1,6 +1,6 @@
 import { getIconPath, type Category, type Variant } from "./plenticons"
 
-export type IconProps = {
+export interface IconProps {
   category: Category;
   name: string;
   variant: Variant;

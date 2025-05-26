@@ -24,10 +24,10 @@ function Header() {
   )
 }
 
-type ModalState = {
+interface ModalState {
   name: string;
   category: Category;
-};
+}
 
 function App() {
   const [variant, setVariant] = useState(DefaultVariant);
