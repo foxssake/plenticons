@@ -4,7 +4,7 @@
 ./sh/build.sh
 
 # Copy icons to site
-cp -r build/site/icons site/
+cp -r build/site/icons site/public/
 
 # Add favicon
 rsvg-convert --zoom 2 icon.svg > site/favicon.png
@@ -13,7 +13,7 @@ rsvg-convert --zoom 2 icon.svg > site/favicon.png
 bundle="$(echo build/*.zip)"
 bundle="$(basename "$bundle")"
 
-cp "build/$bundle" "site/$bundle"
+cp "build/$bundle" "site/public/$bundle"
 
 # Generate manifest
 MANIFEST="site/manifest.json"

@@ -18,15 +18,20 @@
   --variant-gray: #e0e0e0;
   --variant-white: #ffffff;
   --variant-black: #000000;
+
+  --content-bg-color: var(--godot-mid);
+
+  background-color: var(--godot-dark);
 }
 
 body {
-  background-color: var(--godot-dark);
+  background-color: var(--content-bg-color);
   color: var(--godot-text);
   font-family: sans-serif;
 
   max-width: 100vh;
   margin: auto;
+  padding: 1em;
 }
 
 h1 {
@@ -92,7 +97,7 @@ input {
 .toolbar {
   position: sticky;
   top: 0;
-  background-color: inherit;
+  background-color: var(--content-bg-color);
 }
 
 .variant-circle {
@@ -185,9 +190,11 @@ img.icon-inline {
   display: flex;
   align-items: center;
   padding: 2pt;
-  width: 64ch;
+  margin: 2pt;
+  width: 100%;
   max-width: 80vw;
   background-color: var(--godot-mid);
+  font-family: monospace;
 }
 
 .icon-snippet > input {

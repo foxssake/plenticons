@@ -1,50 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>plenticons</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
     <link href="favicon.png" rel="icon">
-
-    <script src="js/index.js" defer></script>
   </head>
   <body>
-    <h1><img src="icons/foxs-sake/plenticons-yellow.svg" />lenticons</h1>
-
-    <p>A pack of icons to use with custom nodes in the <a href="https://godotengine.org/">Godot</a> editor. Or wherever else!</p>
-    
-    <h2 id="features">Features</h2>
-    <ul>
-      <li><img src="./icons/2d/plus-yellow.svg" alt="plus"> 50+ icons of various categories</li>
-      <li><img src="./icons/objects/chest-yellow.svg" alt="chest"> Each icon comes in multiple variants</li>
-      <li><img src="./icons/creatures/heart-full-yellow.svg" alt="heart"> Licensed as CC0 - take it and use it</li>
-      <li><img src="./icons/objects/globe-yellow.svg" alt="globe"> <a href="https://foxssake.github.io/plenticons/">Dedicated site</a> for browsing</li>
-      <li><img src="./icons/2d/checkmark-yellow.svg" alt="check"> Available for HiDPI displays too</li>
-      <li><img src="./icons/objects/lightning-yellow.svg" alt="lightning"> Optimized for size</li>
-    </ul>
-
-    <div class="toolbar">
-      <variant-picker></variant-picker>
-      <a href="https://discord.gg/xWGh4GskG5" target="_blank">
-        <button><img src="assets/discord-mark-white.svg" />Discord</button>
-      </a>
-      <a href="https://ko-fi.com/foxssake" target="_blank">
-        <button><img src="assets/kofi_symbol.svg" />Ko-Fi</button>
-      </a>
-      <a href="https://github.com/foxssake/plenticons" target="_blank">
-        <button><img src="assets/github-mark-white.svg" />GitHub</button>
-      </a>
-      <a href="https://github.com/foxssake/plenticons/blob/main/LICENSE" target="_blank">
-        <button><img/>📜 License</button>
-      </a>
-    </div>
-
-    <div class="icon-card-container">
-    </div>
-
-    <div class="modal" style="visibility: hidden;">
-      <icon-modal></icon-modal>
-    </div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

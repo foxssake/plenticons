@@ -19,19 +19,21 @@ jobs:
         uses: actions/checkout@v2
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Setup node
-        uses: actions/setup-node@v4
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
         with:
-          node-version: lts/*
+          bun-version: latest
       - name: Setup dependencies
-        run: sudo apt install -y librsvg2-bin pngquant && npm i -g svgo
+        run: sudo apt install -y librsvg2-bin pngquant && bun i -g svgo
       - name: Build
         run: sh/site.sh
+      - name: Bundle
+        run: cd site && bun install && bun run build
       - name: Upload
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site/
+          path: site/dist
   deploy:
     permissions:
       pages: write
