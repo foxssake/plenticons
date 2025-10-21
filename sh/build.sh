@@ -65,7 +65,7 @@ addon_root="$root/build/plenticons-v${version}/addons/plenticons/"
 
 mkdir -p "$addon_root"
 
-cp addons/plenticons/* "$addon_root"
+cp -r addons/plenticons/* "$addon_root"
 cp -r build/bundle/icons "$addon_root"
 
 (
