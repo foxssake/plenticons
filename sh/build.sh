@@ -18,6 +18,10 @@ rm -rf build
 mkdir -p build
 echo "" > build/.gdignore
 
+# Settings
+THREADS=8
+PIDS=()
+
 # Generate variants
 CATEGORIES="$(echo icons/*)"
 for CATEGORY in $CATEGORIES; do
@@ -35,6 +39,8 @@ for CATEGORY in $CATEGORIES; do
             VARIANT_COLOR="${COLORS[$VARIANT_NAME]}"
             INPUT="icons/$CATEGORY/$ICON.svg"
             OUT="$ICON-$VARIANT_NAME"
+
+            PIDS=()
             
             echo "Generating variant $VARIANT_NAME for $CATEGORY/$ICON"
 
@@ -43,20 +49,31 @@ for CATEGORY in $CATEGORIES; do
                 rsvg-convert |\
                 pngquant --strip --posterize 1 --speed 2 - |\
                 cat > "build/bundle/icons/16x/$CATEGORY/$OUT.png" &
+            PIDS+=($!);
 
             cat "$INPUT" |\
                 sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
                 rsvg-convert --zoom 4 |\
                 pngquant --strip --posterize 1 --speed 2 - |\
                 cat > "build/bundle/icons/64x-hidpi/$CATEGORY/$OUT.png" &
+            PIDS+=($!);
 
             cat "$INPUT" |\
                 sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
                 svgo - |\
                 cat > "build/site/icons/$CATEGORY/$OUT.svg" &
+            PIDS+=($!);
         done;
+
+        if [ "${#PIDS[@]}" -gt "$THREADS" ]; then
+          wait "${PIDS[@]}"
+          PIDS=()
+        fi
     done;
 done;
+
+# Await any dangling jobs
+wait "${PIDS[@]}"
 
 # Prepare addon
 version="$(sh/version.sh)"
