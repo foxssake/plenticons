@@ -1,5 +1,6 @@
 import { IconCard } from "./IconCard";
 import { manifest, unslug, type Category, type Variant } from "./plenticons";
+import { synonyms } from "./synonyms";
 
 export interface IconCardContainerProps {
   variant: Variant,
@@ -29,5 +30,9 @@ export function IconCardContainer(props: IconCardContainerProps) {
 }
 
 function searchString(category: string, name: string): string {
-  return `${category} ${name}`.toLowerCase();
+  return [
+    unslug(category),
+    name,
+    ...(synonyms[`${category}/${name}`] ?? [])
+  ].join(" ").toLowerCase();
 }
