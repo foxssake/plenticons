@@ -3,6 +3,7 @@ import { IconCardContainer } from "./IconCardContainer"
 import { DefaultVariant, type Category } from "./plenticons"
 import { Toolbar } from "./Toolbar"
 import { IconModal } from "./IconModal"
+import { SearchBar } from "./SearchBar"
 
 function Header() {
   return (
@@ -32,12 +33,19 @@ interface ModalState {
 function App() {
   const [variant, setVariant] = useState(DefaultVariant);
   const [modal, setModal] = useState<ModalState | undefined>(undefined);
+  const [search, setSearch] = useState<string | undefined>(undefined);
 
   return (
     <>
       <Header/>
-      <Toolbar onVariant={setVariant}/>
-      <IconCardContainer variant={variant} onIcon={(category: Category, name: string) => setModal({ category, name })} />
+      <Toolbar onVariant={setVariant}>
+        <SearchBar onChange={setSearch} />
+      </Toolbar>
+      <IconCardContainer
+        variant={variant}
+        search={search}
+        onIcon={(category: Category, name: string) => setModal({ category, name })}
+      />
       { modal && <IconModal category={modal.category} name={modal.name} variant={variant} onClose={() => setModal(undefined)}/>}
     </>
   )

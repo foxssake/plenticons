@@ -1,9 +1,17 @@
+import type { ReactNode } from "react";
 import { icons, type Variant } from "./plenticons";
 import { VariantPicker } from "./VariantPicker";
 
-export function Toolbar(props: { onVariant: (variant: Variant) => void}) {
+export interface ToolbarProps {
+  onVariant: (variant: Variant) => void,
+  children: ReactNode[]
+}
+
+export function Toolbar(props: ToolbarProps) {
   return (
     <div className="toolbar">
+      {props.children}
+
       <VariantPicker onVariant={props.onVariant}/>
       <a href="https://discord.gg/xWGh4GskG5" target="_blank">
         <button><img src={icons.discord} />Discord</button>
