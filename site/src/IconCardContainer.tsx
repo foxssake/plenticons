@@ -17,12 +17,12 @@ export function IconCardContainer(props: IconCardContainerProps) {
             {icons
               .filter(icon => !props.search || searchString(category, icon).includes(props.search))
               .map(icon =>
-              <IconCard
-                key={`${category}/${icon}`}
-                category={category} name={icon} variant={props.variant}
-                onClick={ () => props.onIcon && props.onIcon(category, icon)}
-              />
-            )}
+                <IconCard
+                  key={`${category}/${icon}`}
+                  category={category} name={icon} variant={props.variant}
+                  onClick={ () => props.onIcon && props.onIcon(category, icon)}
+                />
+              )}
           </div>
         )) }
       </div>

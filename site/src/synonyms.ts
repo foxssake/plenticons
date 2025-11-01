@@ -13,10 +13,11 @@ function makeSynonyms(manifest: Manifest, spec: [string | string[], string | str
     const synonyms = typeof entry[1] == "string" ? [entry[1]] : entry[1];
 
     for (const pattern of patterns) {
-      // Find icons matching
+      // Find matching icons
       const matcher = new Minimatch(pattern);
       const matches = iconNames.filter(it => matcher.match(it))
 
+      // Warn if pattern doesn't match - probably spec error
       if (matches.length == 0)
         console.warn(`Pattern "${pattern}" didn't match any icons!`)
 
