@@ -1,73 +1,94 @@
+import { Minimatch } from "minimatch";
+import { manifest, type Manifest } from "./plenticons";
+
 export type Synonyms = Record<string, string[]>;
 
-export const synonyms: Synonyms = {
-  "2d/checkmark": [ "tick", "tickmark", "ok", "done", "yes" ],
-  "2d/circle": [ "ok", "round" ],
-  "2d/cross": [ "no", "deny", "ban", "cancel" ],
-  "2d/square": [ "cube", "box" ],
-  "2d/triangle-up": [ "cone" ],
-  "2d/triangle-down": [ "cone" ],
+function makeSynonyms(manifest: Manifest, spec: [string | string[], string | string[]][]): Synonyms {
+  const result: Synonyms = {}
+  const iconNames = Object.entries(manifest.icons)
+    .flatMap(([category, icons]) => icons.map(icon => `${category}/${icon}`))
 
-  "2d/die-1": [ "dice", "random", "chance", "throwing" ],
-  "2d/die-2": [ "dice", "random", "chance", "throwing" ],
-  "2d/die-3": [ "dice", "random", "chance", "throwing" ],
-  "2d/die-4": [ "dice", "random", "chance", "throwing" ],
-  "2d/die-5": [ "dice", "random", "chance", "throwing" ],
-  "2d/die-6": [ "dice", "random", "chance", "throwing" ],
+  for (const entry of spec) {
+    const patterns = typeof entry[0] == "string" ? [entry[0]] : entry[0];
+    const synonyms = typeof entry[1] == "string" ? [entry[1]] : entry[1];
 
-  "2d/double-chevron-down": [ "arrow", "direction" ],
-  "2d/double-chevron-up": [ "arrow", "direction" ],
-  "2d/double-chevron-left": [ "arrow", "direction" ],
-  "2d/double-chevron-right": [ "arrow", "direction" ],
+    for (const pattern of patterns) {
+      // Find icons matching
+      const matcher = new Minimatch(pattern);
+      const matches = iconNames.filter(it => matcher.match(it))
 
-  "2d/plus": [ "add" ],
-  "2d/spark-full": [ "star" ],
-  "2d/spark-hollow": [ "star" ],
+      if (matches.length == 0)
+        console.warn(`Pattern "${pattern}" didn't match any icons!`)
 
-  "3d/cone": [ "triangle" ],
-  "3d/cube": [ "square", "box" ],
-  "3d/sphere": [ "circle", "round" ],
+      // Add synonyms to each icon
+      for (const icon of matches) {
+        result[icon] = [...(result[icon] ?? []), ...synonyms]
+      }
+    }
+  }
 
-  "creatures/bug": [ "insect", "roach", "tick" ],
-  "creatures/demon": [ "monster", "enemy", "foe", "evil" ],
-  "creatures/eye-closed": [ "invisible", "blind", "shut" ],
-  "creatures/eye-hollow": [ "see", "watch", "visible", "open" ],
-  "creatures/eye": [ "see", "watch", "visible", "open" ],
+  return result
+}
 
-  "creatures/heart-full": [ "life", "lives", "health", "love" ],
-  "creatures/heart-half": [ "life", "lives", "health", "love" ],
-  "creatures/heart": [ "life", "lives", "health", "love" ],
+export const synonyms = makeSynonyms(manifest, [
+  // 2D
+  ["2d/checkmark", [ "tick", "tickmark", "ok", "done", "yes" ]],
+  ["2d/circle", [ "ok", "round" ]],
+  ["2d/cross", [ "no", "deny", "ban", "cancel" ]],
+  ["2d/square", [ "cube", "box" ]],
 
-  "creatures/person": [ "human", "man", "woman", "guy", "gal", "boy", "girl" ],
+  ["2d/triangle*", ["cone"]],
+  ["*/die*", [ "dice", "random", "chance", "throwing" ]],
+  ["2d/*-chevron-*", [ "arrow", "direction" ]],
 
-  "objects/ammo": [ "shells" ],
-  "objects/axe": [ "hatchet", "timber", "lumber", "wood" ],
-  "objects/bell": [ "notification", "alert" ],
-  "objects/bill": [ "money", "currency", "dollars", "euros" ],
-  "objects/cd": [ "dvd" ],
-  "objects/chain": [ "link", "anchor", "reference" ],
-  "objects/chest": [ "box", "treasure", "booty" ],
-  "objects/clock": [ "watch", "time" ],
-  "objects/coins": [ "money", "currency", "dollars", "euros" ],
-  "objects/die": [ "dice", "random", "chance", "throwing" ],
-  "objects/floppy": [ "save" ],
-  "objects/globe": [ "planet", "earth", "global", "internet", "web", "www" ],
-  "objects/gun": [ "weapon", "arm" ],
-  "objects/hammer": [ "build" ],
-  "objects/hourglass": [ "time" ],
-  "objects/key": [ "password", "open", "access" ],
-  "objects/lightbulb": [ "idea", "new", "create" ],
-  "objects/lightning": [ "fast", "speed", "measure", "benchmark" ],
-  "objects/magnifying-glass": [ "search", "find" ],
-  "objects/pickaxe": [ "mine", "mining" ],
-  "objects/shield": [ "protect", "armor", "safe", "security" ],
-  "objects/stopwatch": [ "time", "measure", "benchmark", "speed", "fast" ],
-  "objects/sword": [ "fight", "army", "war", "battle", "force" ],
-  "objects/swords-crossed": [ "fight", "army", "war", "battle", "force" ],
-  "objects/trashcan": [ "delete", "clear", "remove", "erase", "recycle", "bin" ],
+  ["2d/plus", [ "add" ]],
+  ["2d/spark*", [ "star" ]],
 
-  "symbols/crosshair": [ "aim" ],
-  "symbols/jump-to": [ "go to", "goto" ],
-  "symbols/refresh": [ "reload" ],
-  "symbols/todo": [ "list" ]
-};
+  // 3D
+  ["3d/cone", [ "triangle" ]],
+  ["3d/cube", [ "square", "box" ]],
+  ["3d/sphere", [ "circle", "round" ]],
+
+  // Creatures
+  ["creatures/bug", [ "insect", "roach", "tick" ]],
+  ["creatures/demon", [ "monster", "enemy", "foe", "evil" ]],
+  ["creatures/eye-closed", [ "invisible", "blind", "shut" ]],
+  [["creatures/eye-hollow", "creatures/eye"], [ "see", "watch", "visible", "open" ]],
+
+  ["creatures/heart*", [ "life", "lives", "health", "love" ]],
+  
+  ["creatures/person", [ "human", "man", "woman", "guy", "gal", "boy", "girl" ]],
+
+  // Objects
+  ["objects/ammo", [ "shells" ]],
+  ["objects/axe", [ "hatchet", "timber", "lumber", "wood" ]],
+  ["objects/bell", [ "notification", "alert" ]],
+  [["objects/bill", "objects/coins"], [ "money", "currency", "dollars", "euros" ]],
+  ["objects/cd", [ "dvd" ]],
+  ["objects/chain", [ "link", "anchor", "reference" ]],
+  ["objects/chest", [ "box", "treasure", "booty" ]],
+  ["objects/clock", [ "watch", "time" ]],
+  ["objects/floppy", [ "save" ]],
+  ["objects/globe", [ "planet", "earth", "global", "internet", "web", "www" ]],
+  ["objects/gun", [ "weapon", "arm" ]],
+  ["objects/hammer", [ "build" ]],
+  ["objects/hourglass", [ "time" ]],
+  ["objects/key", [ "password", "open", "access" ]],
+  ["objects/lightbulb", [ "idea", "new", "create" ]],
+  ["objects/lightning", [ "fast", "speed", "measure", "benchmark" ]],
+  ["objects/magnifying-glass", [ "search", "find" ]],
+  ["objects/pickaxe", [ "mine", "mining" ]],
+  ["objects/shield", [ "protect", "armor", "safe", "security" ]],
+  ["objects/stopwatch", [ "time", "measure", "benchmark", "speed", "fast" ]],
+  ["objects/sword*", [ "fight", "army", "war", "battle", "force" ]],
+  ["objects/trashcan", [ "delete", "clear", "remove", "erase", "recycle", "bin" ]],
+
+  [["objects/vial", "objects/*-flask"], ["vial", "flask", "bottle"]],
+  ["objects/conical-flask", ["experiment", "chemistry", "chemical"]],
+
+  // Symbols
+  ["symbols/crosshair", [ "aim" ]],
+  ["symbols/jump-to", [ "go to", "goto" ]],
+  ["symbols/refresh", [ "reload" ]],
+  ["symbols/todo", [ "list" ]]
+])
