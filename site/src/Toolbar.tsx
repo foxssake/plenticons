@@ -4,7 +4,7 @@ import { VariantPicker } from "./VariantPicker";
 
 export interface ToolbarProps {
   onVariant: (variant: Variant) => void,
-  children: ReactNode[]
+  children: ReactNode[] | ReactNode
 }
 
 export function Toolbar(props: ToolbarProps) {
