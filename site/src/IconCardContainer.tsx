@@ -1,13 +1,21 @@
 import { IconCard } from "./IconCard";
 import { manifest, unslug, type Category, type Variant } from "./plenticons";
 
-export function IconCardContainer(props: {variant: Variant, onIcon?: (category: Category, name: string) => void}) {
+export interface IconCardContainerProps {
+  variant: Variant,
+  search?: string,
+  onIcon?: (category: Category, name: string) => void,
+}
+
+export function IconCardContainer(props: IconCardContainerProps) {
   return (
       <div className="icon-card-container">
         {Object.entries(manifest.icons).map(([category, icons]) => (
           <div key={category}>
             <h3>{unslug(category)}</h3>
-            {icons.map(icon =>
+            {icons
+              .filter(icon => !props.search || searchString(category, icon).includes(props.search))
+              .map(icon =>
               <IconCard
                 key={`${category}/${icon}`}
                 category={category} name={icon} variant={props.variant}
@@ -18,4 +26,8 @@ export function IconCardContainer(props: {variant: Variant, onIcon?: (category: 
         )) }
       </div>
   )
+}
+
+function searchString(category: string, name: string): string {
+  return `${category} ${name}`.toLowerCase();
 }
