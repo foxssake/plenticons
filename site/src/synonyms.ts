@@ -58,7 +58,7 @@ export const synonyms = makeSynonyms(manifest, [
 
   ["creatures/heart*", [ "life", "lives", "health", "love" ]],
   
-  ["creatures/person", [ "human", "man", "woman", "guy", "gal", "boy", "girl" ]],
+  ["creatures/person", [ "human", "man", "woman", "guy", "gal", "boy", "girl", "head" ]],
 
   // Objects
   ["objects/ammo", [ "shells" ]],
@@ -69,10 +69,12 @@ export const synonyms = makeSynonyms(manifest, [
   ["objects/chain", [ "link", "anchor", "reference" ]],
   ["objects/chest", [ "box", "treasure", "booty" ]],
   ["objects/clock", [ "watch", "time" ]],
+  ["objects/comet", [ "falling star" ]],
   ["objects/floppy", [ "save" ]],
   ["objects/globe", [ "planet", "earth", "global", "internet", "web", "www" ]],
   ["objects/gun", [ "weapon", "arm" ]],
   ["objects/hammer", [ "build" ]],
+  ["objects/helmet", [ "head", "armor", "hat" ]],
   ["objects/hourglass", [ "time" ]],
   ["objects/key", [ "password", "open", "access" ]],
   ["objects/lightbulb", [ "idea", "new", "create" ]],
