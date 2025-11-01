@@ -3,8 +3,12 @@ export interface SearchBarProps {
 }
 
 export function SearchBar(props: SearchBarProps) {
-  return <>
+  return <div className="searchbar">
     <img src="./icons/objects/magnifying-glass-gray.svg" alt="search"></img>
-    <input type="text" onChange={e => props.onChange?.call(undefined, e.target.value)}></input>
-  </>;
+    <input 
+      type="text" 
+      placeholder="Search icons"
+      onChange={e => props.onChange?.call(undefined, e.target.value)}
+    />
+  </div>;
 }

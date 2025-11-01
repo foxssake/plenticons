@@ -38,8 +38,9 @@ function App() {
   return (
     <>
       <Header/>
-      <Toolbar onVariant={setVariant}/>
-      <SearchBar onChange={setSearch} />
+      <Toolbar onVariant={setVariant}>
+        <SearchBar onChange={setSearch} />
+      </Toolbar>
       <IconCardContainer
         variant={variant}
         search={search}

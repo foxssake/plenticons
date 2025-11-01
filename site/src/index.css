@@ -230,3 +230,16 @@ img.icon-inline {
   text-align: right;
   position: relative;
 }
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  padding: 2pt;
+  margin: 2pt;
+  width: 100%;
+  background-color: var(--godot-dark);
+}
+
+.searchbar > input {
+  flex-grow: 1;
+}
