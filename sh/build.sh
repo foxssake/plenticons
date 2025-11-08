@@ -22,12 +22,15 @@ echo "" > build/.gdignore
 THREADS=8
 PIDS=()
 
+echo "Building plenticons with $THREADS threads"
+
 # Generate variants
 CATEGORIES="$(echo icons/*)"
 for CATEGORY in $CATEGORIES; do
     CATEGORY="$(basename "$CATEGORY")"
     mkdir -p "build/bundle/icons/64x-hidpi/$CATEGORY"
     mkdir -p "build/bundle/icons/16x/$CATEGORY"
+    mkdir -p "build/bundle/icons/svg/$CATEGORY"
     mkdir -p "build/site/icons/$CATEGORY"
 
     ICONS="$(find "icons/$CATEGORY" -type f -name "*.svg")"
@@ -44,6 +47,14 @@ for CATEGORY in $CATEGORIES; do
             
             echo "Generating variant $VARIANT_NAME for $CATEGORY/$ICON"
 
+            # Render SVG for bundle
+            cat "$INPUT" |\
+                sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
+                svgo - |\
+                cat > "build/bundle/icons/svg/$CATEGORY/$OUT.svg" &
+            PIDS+=($!);
+
+            # Render 16px PNG
             cat "$INPUT" |\
                 sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
                 rsvg-convert |\
@@ -51,6 +62,7 @@ for CATEGORY in $CATEGORIES; do
                 cat > "build/bundle/icons/16x/$CATEGORY/$OUT.png" &
             PIDS+=($!);
 
+            # Render 64px PNG
             cat "$INPUT" |\
                 sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
                 rsvg-convert --zoom 4 |\
@@ -58,22 +70,25 @@ for CATEGORY in $CATEGORIES; do
                 cat > "build/bundle/icons/64x-hidpi/$CATEGORY/$OUT.png" &
             PIDS+=($!);
 
+            # Render SVG for site
             cat "$INPUT" |\
                 sed "s/$BASE_COLOR/$VARIANT_COLOR/g" |\
                 svgo - |\
                 cat > "build/site/icons/$CATEGORY/$OUT.svg" &
             PIDS+=($!);
-        done;
 
-        if [ "${#PIDS[@]}" -gt "$THREADS" ]; then
-          wait "${PIDS[@]}"
-          PIDS=()
-        fi
+          if [ "${#PIDS[@]}" -gt "$THREADS" ]; then
+            echo "-- Awaiting ${#PIDS[@]} thread(s) --"
+            wait ${PIDS[@]}
+            PIDS=()
+          fi
+        done;
     done;
 done;
 
 # Await any dangling jobs
-wait "${PIDS[@]}"
+echo "-- Awaiting ${#PIDS[@]} thread(s) --"
+wait ${PIDS[@]}
 
 # Prepare addon
 version="$(sh/version.sh)"
