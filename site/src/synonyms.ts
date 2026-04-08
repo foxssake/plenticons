@@ -49,6 +49,8 @@ export const synonyms = makeSynonyms(manifest, [
   ["3d/cone", [ "triangle" ]],
   ["3d/cube", [ "square", "box" ]],
   ["3d/sphere", [ "circle", "round" ]],
+  ["3d/cylinder", [ "pillar", "column" ]],
+  ["3d/torus", [ "donut" ]],
 
   // Creatures
   ["creatures/bug", [ "insect", "roach", "tick" ]],
@@ -74,7 +76,7 @@ export const synonyms = makeSynonyms(manifest, [
   ["objects/globe", [ "planet", "earth", "global", "internet", "web", "www" ]],
   ["objects/gun", [ "weapon", "arm" ]],
   ["objects/hammer", [ "build" ]],
-  ["objects/helmet", [ "head", "armor", "hat" ]],
+  ["objects/helmet", [ "head", "armor", "hat", "unit" ]],
   ["objects/hourglass", [ "time" ]],
   ["objects/key", [ "password", "open", "access" ]],
   ["objects/lightbulb", [ "idea", "new", "create" ]],
@@ -93,5 +95,8 @@ export const synonyms = makeSynonyms(manifest, [
   ["symbols/crosshair", [ "aim" ]],
   ["symbols/jump-to", [ "go to", "goto" ]],
   ["symbols/refresh", [ "reload" ]],
-  ["symbols/todo", [ "list" ]]
+  ["symbols/todo", [ "list" ]],
+  ["symbols/integer-number", [ "value", "amount", "count", "integer", "01", "1" ]],
+  ["symbols/fractional-number", [ "value", "amount", "count", "integer", "fraction", "half", ".5" ]],
+  ["symbols/variable", [ "x", "value", "constant" ]]
 ])
